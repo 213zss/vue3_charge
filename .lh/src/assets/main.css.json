@@ -1,0 +1,86 @@
+{
+    "sourceFile": "src/assets/main.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1712542811617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712542838495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,8 @@\n     grid-template-columns: 1fr 1fr;\n     padding: 0 2rem;\n   }\n }\n-@primary: #18b7d3; // 主题色\n+\n+@primary: #18b7d3; \n @danger: #fc3c0c;\n @primary-bg: #f5f5f5;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712542843967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,4 @@\n     padding: 0 2rem;\n   }\n }\n \n-@primary: #18b7d3; \n-@danger: #fc3c0c;\n-@primary-bg: #f5f5f5;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712561432404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n #app {\n   max-width: 1280px;\n   margin: 0 auto;\n-  padding: 2rem;\n+  padding: 0;\n   font-weight: normal;\n }\n \n a,\n"
+                },
+                {
+                    "date": 1712561491242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n   max-width: 1280px;\n   margin: 0 auto;\n   padding: 0;\n   font-weight: normal;\n+  height: ;\n }\n \n a,\n .green {\n"
+                },
+                {
+                    "date": 1712561515454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,15 @@\n   max-width: 1280px;\n   margin: 0 auto;\n   padding: 0;\n   font-weight: normal;\n-  height: ;\n+  height: 100%;\n }\n \n+* {\n+  box-sizing: border-box;\n+}\n+\n a,\n .green {\n   text-decoration: none;\n   color: hsla(160, 100%, 37%, 1);\n"
+                },
+                {
+                    "date": 1712562121009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,13 @@\n @import './base.css';\n \n+body,\n+html,\n+p {\n+  height: 100%;\n+  margin: 0;\n+  padding: 0;\n+}\n #app {\n   max-width: 1280px;\n   margin: 0 auto;\n   padding: 0;\n"
+                },
+                {
+                    "date": 1712562127772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,19 +6,22 @@\n   height: 100%;\n   margin: 0;\n   padding: 0;\n }\n+\n+* {\n+  box-sizing: border-box;\n+}\n+\n+\n #app {\n   max-width: 1280px;\n   margin: 0 auto;\n   padding: 0;\n   font-weight: normal;\n   height: 100%;\n }\n \n-* {\n-  box-sizing: border-box;\n-}\n \n a,\n .green {\n   text-decoration: none;\n"
+                },
+                {
+                    "date": 1712562189580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,16 +13,14 @@\n }\n \n \n #app {\n-  max-width: 1280px;\n   margin: 0 auto;\n   padding: 0;\n   font-weight: normal;\n   height: 100%;\n }\n \n-\n a,\n .green {\n   text-decoration: none;\n   color: hsla(160, 100%, 37%, 1);\n"
+                },
+                {
+                    "date": 1712562226771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,8 @@\n }\n \n \n #app {\n-  margin: 0 auto;\n-  padding: 0;\n-  font-weight: normal;\n   height: 100%;\n }\n \n a,\n@@ -33,17 +30,4 @@\n     background-color: hsla(160, 100%, 37%, 0.2);\n   }\n }\n \n-@media (min-width: 1024px) {\n-  body {\n-    display: flex;\n-    place-items: center;\n-  }\n-\n-  #app {\n-    display: grid;\n-    grid-template-columns: 1fr 1fr;\n-    padding: 0 2rem;\n-  }\n-}\n-\n"
+                },
+                {
+                    "date": 1712562253057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,18 +16,4 @@\n #app {\n   height: 100%;\n }\n \n-a,\n-.green {\n-  text-decoration: none;\n-  color: hsla(160, 100%, 37%, 1);\n-  transition: 0.4s;\n-  padding: 3px;\n-}\n-\n-@media (hover: hover) {\n-  a:hover {\n-    background-color: hsla(160, 100%, 37%, 0.2);\n-  }\n-}\n-\n"
+                },
+                {
+                    "date": 1712562350174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,8 @@\n \n \n #app {\n   height: 100%;\n+  background-color: #f5f5f5;\n+\n }\n \n"
+                },
+                {
+                    "date": 1712645401387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n \n \n #app {\n   height: 100%;\n-  background-color: #f5f5f5;\n+  background-color: $primary-bg;\n \n }\n \n"
+                },
+                {
+                    "date": 1712645427081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n \n \n #app {\n   height: 100%;\n-  background-color: $primary-bg;\n+  background-color: #f5f5f5;\n \n }\n \n"
+                },
+                {
+                    "date": 1713000915101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,7 @@\n \n #app {\n   height: 100%;\n   background-color: #f5f5f5;\n-\n+  ov\n }\n \n"
+                },
+                {
+                    "date": 1713001191356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,6 @@\n \n #app {\n   height: 100%;\n   background-color: #f5f5f5;\n-  ov\n }\n \n"
+                },
+                {
+                    "date": 1713001206165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,7 @@\n \n #app {\n   height: 100%;\n   background-color: #f5f5f5;\n+  overflow: auto;\n }\n \n"
+                },
+                {
+                    "date": 1713001288370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,6 @@\n \n \n #app {\n   height: 100%;\n-  background-color: #f5f5f5;\n-  overflow: auto;\n }\n \n"
+                }
+            ],
+            "date": 1712542811617,
+            "name": "Commit-0",
+            "content": "@import './base.css';\n\n#app {\n  max-width: 1280px;\n  margin: 0 auto;\n  padding: 2rem;\n  font-weight: normal;\n}\n\na,\n.green {\n  text-decoration: none;\n  color: hsla(160, 100%, 37%, 1);\n  transition: 0.4s;\n  padding: 3px;\n}\n\n@media (hover: hover) {\n  a:hover {\n    background-color: hsla(160, 100%, 37%, 0.2);\n  }\n}\n\n@media (min-width: 1024px) {\n  body {\n    display: flex;\n    place-items: center;\n  }\n\n  #app {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    padding: 0 2rem;\n  }\n}\n@primary: #18b7d3; // 主题色\n@danger: #fc3c0c;\n@primary-bg: #f5f5f5;"
+        }
+    ]
+}

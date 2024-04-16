@@ -1,0 +1,98 @@
+{
+    "sourceFile": "src/views/About.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1712572929205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712573016874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,12 @@\n-关于我们\n\\ No newline at end of file\n+<template>\r\n+\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712577942627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-\r\n+.\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712577949407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,14 @@\n <template>\r\n-.\r\n+    <div class=\"about\">\r\n+        <van-nav-bar\r\n+            :title=\"type==='login'?'登录':'注册'\"\r\n+            left-text=\"返回\"\r\n+            left-arrow\r\n+            @click-left=\"back\"\r\n+            fixed=\"true\"\r\n+            />\r\n+    </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712577955598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n     <div class=\"about\">\r\n         <van-nav-bar\r\n-            :title=\"type==='login'?'登录':'注册'\"\r\n+            title=\"\"\r\n             left-text=\"返回\"\r\n             left-arrow\r\n             @click-left=\"back\"\r\n             fixed=\"true\"\r\n"
+                },
+                {
+                    "date": 1712578004792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,15 @@\n <template>\r\n     <div class=\"about\">\r\n         <van-nav-bar\r\n-            title=\"\"\r\n+            title=\"关于我们\"\r\n             left-text=\"返回\"\r\n             left-arrow\r\n             @click-left=\"back\"\r\n             fixed=\"true\"\r\n             />\r\n+            <h1>关于我们</h1>\r\n+            \r\n     </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n"
+                },
+                {
+                    "date": 1712578020059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n             @click-left=\"back\"\r\n             fixed=\"true\"\r\n             />\r\n             <h1>关于我们</h1>\r\n-            \r\n+        <div class=\"content\">\r\n+            欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，帮助您轻松管理个人财务，实现理财目标。\r\n+        </div>\r\n     </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n"
+                },
+                {
+                    "date": 1712578029467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n             fixed=\"true\"\r\n             />\r\n             <h1>关于我们</h1>\r\n         <div class=\"content\">\r\n-            欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，帮助您轻松管理个人财务，实现理财目标。\r\n+            欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n+            我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，帮助您轻松管理个人财务，实现理财目标。\r\n         </div>\r\n     </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712578037692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,13 @@\n             @click-left=\"back\"\r\n             fixed=\"true\"\r\n             />\r\n             <h1>关于我们</h1>\r\n-        <div class=\"content\">\r\n-            欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n-            我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，帮助您轻松管理个人财务，实现理财目标。\r\n-        </div>\r\n+            <div class=\"content\">\r\n+                欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n+                我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，\r\n+                帮助您轻松管理个人财务，实现理财目标。\r\n+            </div>\r\n     </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n"
+                },
+                {
+                    "date": 1712578042861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,14 @@\n                 欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n                 我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，\r\n                 帮助您轻松管理个人财务，实现理财目标。\r\n             </div>\r\n+            <h1>关于我们</h1>\r\n+            <div class=\"content\">\r\n+                欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n+                我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，\r\n+                帮助您轻松管理个人财务，实现理财目标。\r\n+            </div>\r\n     </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n"
+                },
+                {
+                    "date": 1712578074432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n                 欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n                 我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，\r\n                 帮助您轻松管理个人财务，实现理财目标。\r\n             </div>\r\n-            <h1>关于我们</h1>\r\n+            <h1>联系我们</h1>\r\n             <div class=\"content\">\r\n                 欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n                 我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，\r\n                 帮助您轻松管理个人财务，实现理财目标。\r\n"
+                },
+                {
+                    "date": 1712578084282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,13 @@\n                 帮助您轻松管理个人财务，实现理财目标。\r\n             </div>\r\n             <h1>联系我们</h1>\r\n             <div class=\"content\">\r\n-                欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n-                我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，\r\n-                帮助您轻松管理个人财务，实现理财目标。\r\n+                如果您有任何问题、建议或反馈，都可以随时联系我们。您可以通过以下方式与我们联系：\r\n+                电子邮件：contact@example.com\r\n+客服电话：+1234567890\r\n+社交媒体：Twitter | Facebook\r\n+感谢您选择我们的记账应用，我们期待为您提供最佳的记账体验！\r\n             </div>\r\n     </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712578091131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n                 如果您有任何问题、建议或反馈，都可以随时联系我们。您可以通过以下方式与我们联系：\r\n                 电子邮件：contact@example.com\r\n 客服电话：+1234567890\r\n 社交媒体：Twitter | Facebook\r\n-感谢您选择我们的记账应用，我们期待为您提供最佳的记账体验！\r\n             </div>\r\n+            .cl\r\n     </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n"
+                },
+                {
+                    "date": 1712578098930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,12 @@\n                 电子邮件：contact@example.com\r\n 客服电话：+1234567890\r\n 社交媒体：Twitter | Facebook\r\n             </div>\r\n-            .cl\r\n+            <div>\r\n+感谢您选择我们的记账应用，我们期待为您提供最佳的记账体验！\r\n+\r\n+            </div>\r\n     </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n"
+                },
+                {
+                    "date": 1712578104943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,14 +16,13 @@\n             <h1>联系我们</h1>\r\n             <div class=\"content\">\r\n                 如果您有任何问题、建议或反馈，都可以随时联系我们。您可以通过以下方式与我们联系：\r\n                 电子邮件：contact@example.com\r\n-客服电话：+1234567890\r\n-社交媒体：Twitter | Facebook\r\n+                客服电话：+1234567890\r\n+                社交媒体：Twitter | Facebook\r\n             </div>\r\n             <div>\r\n-感谢您选择我们的记账应用，我们期待为您提供最佳的记账体验！\r\n-\r\n+                感谢您选择我们的记账应用，我们期待为您提供最佳的记账体验！\r\n             </div>\r\n     </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712578226462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n import {  } from 'vue'\r\n \r\n </script>\r\n \r\n-<style scoped>\r\n+<style scoped lang=\"scss\">\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712578234307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,6 +31,8 @@\n \r\n </script>\r\n \r\n <style scoped lang=\"scss\">\r\n-\r\n+.about{\r\n+    padding: 15px;\r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712578264304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,9 @@\n </script>\r\n \r\n <style scoped lang=\"scss\">\r\n .about{\r\n-    padding: 15px;\r\n+    height: calc(100% - 16px);\r\n+    position: relative;\r\n+    padding: 80px 20px 0 20px;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712578309444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,6 +35,9 @@\n .about{\r\n     height: calc(100% - 16px);\r\n     position: relative;\r\n     padding: 80px 20px 0 20px;\r\n+    h1{\r\n+        ma\r\n+    }\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712578315498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,8 @@\n     height: calc(100% - 16px);\r\n     position: relative;\r\n     padding: 80px 20px 0 20px;\r\n     h1{\r\n-        margin: 15px 0;\r\n+        margin: 15px 0  ;\r\n     }\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712578374810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,44 @@\n+<template>\r\n+    <div class=\"about\">\r\n+        <van-nav-bar\r\n+            title=\"关于我们\"\r\n+            left-text=\"返回\"\r\n+            left-arrow\r\n+            @click-left=\"back\"\r\n+            fixed=\"true\"\r\n+            />\r\n+            <h1>关于我们</h1>\r\n+            <div class=\"content\">\r\n+                欢迎使用我们的记账应用！我们是一支致力于为用户提供方便、简单、高效的记账解决方案的团队。\r\n+                我们相信良好的财务习惯对每个人都至关重要，因此我们设计并开发了这个应用，\r\n+                帮助您轻松管理个人财务，实现理财目标。\r\n+            </div>\r\n+            <h1>联系我们</h1>\r\n+            <div class=\"content\">\r\n+                如果您有任何问题、建议或反馈，都可以随时联系我们。您可以通过以下方式与我们联系：\r\n+                电子邮件：contact@example.com\r\n+                客服电话：+1234567890\r\n+                社交媒体：Twitter | Facebook\r\n+            </div>\r\n+            <div>\r\n+                感谢您选择我们的记账应用，我们期待为您提供最佳的记账体验！\r\n+            </div>\r\n+    </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped lang=\"scss\">\r\n+.about{\r\n+    height: calc(100% - 16px);\r\n+    position: relative;\r\n+    padding: 80px 20px 0 20px;\r\n+    h1{\r\n+        margin: 15px 0  ;\r\n+    }\r\n+        \r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712572929205,
+            "name": "Commit-0",
+            "content": "关于我们"
+        }
+    ]
+}

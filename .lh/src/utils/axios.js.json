@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/utils/axios.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1712541669708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712570263271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,17 @@\n       router.push({ path: \"/login\" });\r\n     }\r\n     return Promise.reject(res.data);\r\n   }\r\n+  if (res.data.code != 200) {\r\n+    // 代码 2\r\n+    if (res.data.msg) Toast.fail(res.data.msg);\r\n+    // 代码 3\r\n+    if (res.data.code == 401) {\r\n+      router.push({ path: \"/login\" });\r\n+    }\r\n+    return Promise.reject(res.data);\r\n+  }\r\n   // 其他情况直接返回 data 数据\r\n   return res.data;\r\n });\r\n \r\n"
+                },
+                {
+                    "date": 1712583995797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//localhost:7001\"\r\n+    ? \"//110.40.173.100:5173/api/\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712584526319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,17 +24,8 @@\n       router.push({ path: \"/login\" });\r\n     }\r\n     return Promise.reject(res.data);\r\n   }\r\n-  if (res.data.code != 200) {\r\n-    // 代码 2\r\n-    if (res.data.msg) Toast.fail(res.data.msg);\r\n-    // 代码 3\r\n-    if (res.data.code == 401) {\r\n-      router.push({ path: \"/login\" });\r\n-    }\r\n-    return Promise.reject(res.data);\r\n-  }\r\n   // 其他情况直接返回 data 数据\r\n   return res.data;\r\n });\r\n \r\n"
+                },
+                {
+                    "date": 1712584604203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//110.40.173.100:5173/api/\"\r\n+    ? \"//110.40.173.100:5173/api\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712585318500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//110.40.173.100:5173/api\"\r\n+    ? \"//localhost:7001\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712585324649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//localhost:7001\"\r\n+    ? \"//localhost:8001\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712585333801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//localhost:8001\"\r\n+    ? \"//localhost:8080\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712585345501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//localhost:8080\"\r\n+    ? \"//localhost:7001\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n@@ -24,8 +24,9 @@\n       router.push({ path: \"/login\" });\r\n     }\r\n     return Promise.reject(res.data);\r\n   }\r\n+\r\n   // 其他情况直接返回 data 数据\r\n   return res.data;\r\n });\r\n \r\n"
+                },
+                {
+                    "date": 1712585357234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//localhost:7001\"\r\n+    ? \"//localhost:8080\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n@@ -24,9 +24,8 @@\n       router.push({ path: \"/login\" });\r\n     }\r\n     return Promise.reject(res.data);\r\n   }\r\n-\r\n   // 其他情况直接返回 data 数据\r\n   return res.data;\r\n });\r\n \r\n"
+                },
+                {
+                    "date": 1712585367180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//localhost:8080\"\r\n+    ? \"http://110.40.173.100:5173/ap\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712585381443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"http://110.40.173.100:5173/ap\"\r\n+    ? \"//110.40.173.100:5173/api\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712585393868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//110.40.173.100:5173/api\"\r\n+    ? \"//localhost:7001\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712585400223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"//localhost:7001\"\r\n+    ? \"//110.40.173.100:5173/api\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712585442828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useRouter } from \"vue-router\";\r\n \r\n axios.defaults.baseURL =\r\n   process.env.NODE_ENV == \"development\"\r\n-    ? \"http://110.40.173.100:5173/api\"\r\n+    ? \"//110.40.173.100:5173/api\"\r\n     : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n axios.defaults.withCredentials = true; // 允许跨域\r\n axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n"
+                },
+                {
+                    "date": 1712649208942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import axios from \"axios\";\r\n+// import { Toast } from \"vant\";\r\n+import { useRouter } from \"vue-router\";\r\n+\r\n+axios.defaults.baseURL =\r\n+  process.env.NODE_ENV == \"development\"\r\n+    ? \"/api\"\r\n+    : \"//47.99.134.126:7008/api\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\n+axios.defaults.withCredentials = true; // 允许跨域\r\n+axios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\n+axios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\n+axios.defaults.headers.post[\"Content-Type\"] = \"application/json\";\r\n+\r\n+axios.interceptors.response.use((res) => {\r\n+  const router = useRouter(); // vue-router 4.x 的实例\r\n+  if (typeof res.data !== \"object\") {\r\n+    showFailToast(\"服务端异常！\");\r\n+    return Promise.reject(res);\r\n+  }\r\n+  // code 非 200 的情况下为异常情况\r\n+  if (res.data.code != 200) {\r\n+    if (res.data.msg) showFailToast(res.data.msg);\r\n+    if (res.data.code == 401) {\r\n+      router.push({ path: \"/login\" });\r\n+    }\r\n+    return Promise.reject(res.data);\r\n+  }\r\n+  // 其他情况直接返回 data 数据\r\n+  return res.data;\r\n+});\r\n+\r\n+export default axios;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712541669708,
+            "name": "Commit-0",
+            "content": "import axios from \"axios\";\r\nimport { Toast } from \"vant\";\r\nimport { useRouter } from \"vue-router\";\r\n\r\naxios.defaults.baseURL =\r\n  process.env.NODE_ENV == \"development\"\r\n    ? \"//localhost:7001\"\r\n    : \"//47.99.134.126:7008\"; // 根据环境变量切换本地和线上的请求地址,如果用不了改成：47.99.134.126:7009\r\naxios.defaults.withCredentials = true; // 允许跨域\r\naxios.defaults.headers[\"X-Requested-With\"] = \"XMLHttpRequest\";\r\naxios.defaults.headers[\"token\"] = localStorage.getItem(\"token\") || \"\"; // 本项目采用 token 的用户鉴权方式，在请求头的 headers 内添加 token，每次请求都会验证用户信息\r\naxios.defaults.headers.post[\"Content-Type\"] = \"application/json\";\r\n\r\naxios.interceptors.response.use((res) => {\r\n  const router = useRouter(); // vue-router 4.x 的实例\r\n  if (typeof res.data !== \"object\") {\r\n    Toast.fail(\"服务端异常！\");\r\n    return Promise.reject(res);\r\n  }\r\n  // code 非 200 的情况下为异常情况\r\n  if (res.data.code != 200) {\r\n    if (res.data.msg) Toast.fail(res.data.msg);\r\n    if (res.data.code == 401) {\r\n      router.push({ path: \"/login\" });\r\n    }\r\n    return Promise.reject(res.data);\r\n  }\r\n  // 其他情况直接返回 data 数据\r\n  return res.data;\r\n});\r\n\r\nexport default axios;"
+        }
+    ]
+}

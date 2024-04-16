@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/assets/components/page/views/Home.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1712538535048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712538562819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-\r\n+<div>App首页</div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712538579631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+<template>\r\n+    <div>App首页</div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712540031680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,17 +8,5 @@\n </script>\r\n \r\n <style scoped>\r\n \r\n-</style>\n-<template>\r\n-<div>App首页</div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712540049163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+<template>\r\n+    <div>App首页</div>\r\n+    <van-button type=\"primary\" size=\"large\">大号按钮</van-button>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712540874265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,16 @@\n <template>\r\n-    <div>App首页</div>\r\n+     css: {\r\n+    postcss: {\r\n+      plugins: [\r\n+        postCssPxToRem({\r\n+          rootValue: 37.5, // 1rem的大小\r\n+          propList: ['*'], // 需要转换的属性，这里选择全部都进行转换\r\n+          selectorBlackList: [\".norem\"], // 过滤掉.norem-开头的 class，不进行 rem 转换\r\n+        })\r\n+      ]\r\n+    }\r\n+  }\r\n     <van-button type=\"primary\" size=\"large\">大号按钮</van-button>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Home\" setup>\r\n"
+                },
+                {
+                    "date": 1712540884672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+<template>\r\n+    <div class=\"demo\">首页App</div>\r\n+    <van-button type=\"primary\" size=\"large\">大号按钮</van-button>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+ .demo {\r\n+    width: 100px;\r\n+    height: 100px;\r\n+    background-color: aquamarine;\r\n+  }\r\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712538535048,
+            "name": "Commit-0",
+            "content": "<template>\r\n\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

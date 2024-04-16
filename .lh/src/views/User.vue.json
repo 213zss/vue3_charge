@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/views/User.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1712546403974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712546420472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"User\" setup>\r\n import {  } from 'vue'\r\n-\r\n+im\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712546426052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"User\" setup>\r\n import {  } from 'vue'\r\n-im\r\n+import {R}\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712546435985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"User\" setup>\r\n import {  } from 'vue'\r\n-import {R}\r\n+import { RouterLink,RouterView } from 'vue-router';\r\n+\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712546441530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-<RouterLink to=\"/login\">前往登录注册</router-link>\r\n+<RouterLink to=\"/login\">前往登录注册</RouterLink>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"User\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712546450512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-<RouterLink to=\"/login\">前往登录注册</RouterLink>\r\n+    <RouterLink to=\"/login\">前往登录注册</RouterLink>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"User\" setup>\r\n import {  } from 'vue'\r\n"
+                }
+            ],
+            "date": 1712546403974,
+            "name": "Commit-0",
+            "content": "<template>\r\n<router-link to=\"/login\">前往登录注册</router-link>\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"User\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

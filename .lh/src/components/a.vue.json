@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/a.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1713003897571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713003905514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+<template>\r\n+ <van-popup\r\n+    v-model:show=\"show\"\r\n+    position=\"bottom\"\r\n+    round\r\n+    :style=\"{ height: '60%' }\"\r\n+  >\r\n+    添加账单弹窗\r\n+  </van-popup>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"\" setup>\r\n+ import { reactive, toRefs, onMounted } from \"vue\";\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713003914452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n  import { reactive, toRefs, onMounted } from \"vue\";\r\n+ let show: false\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1713003920024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n  import { reactive, toRefs, onMounted } from \"vue\";\r\n- let show\r\n+ let show=\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1713003930852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+<template>\r\n+ <van-popup\r\n+    v-model:show=\"show\"\r\n+    position=\"bottom\"\r\n+    round\r\n+    :style=\"{ height: '60%' }\"\r\n+  >\r\n+    添加账单弹窗\r\n+  </van-popup>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"\" setup>\r\n+ import { ref, toRefs, onMounted } from \"vue\";\r\n+ let show=ref(false)\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1713003897571,
+            "name": "Commit-0",
+            "content": "<template>\r\n\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

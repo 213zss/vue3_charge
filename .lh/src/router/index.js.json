@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1712538354815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712538362173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-in\n\\ No newline at end of file\n+import {cre}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712538367542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import {cre}\n\\ No newline at end of file\n+import {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712538374242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import {}\n\\ No newline at end of file\n+import { createRouter } from \"vue-router\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712538382161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+import { createRouter,createWebHashHistory } from \"vue-router\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712538389942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import { createRouter,createWebHashHistory } from \"vue-router\";\n\\ No newline at end of file\n+import { createRouter,createWebHashHistory } from \"vue-router\";\r\n+cons\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712538399669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n import { createRouter,createWebHashHistory } from \"vue-router\";\r\n-const route=\n\\ No newline at end of file\n+const route=createRouter({\r\n+    \r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712538408685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import { createRouter,createWebHashHistory } from \"vue-router\";\r\n+const route=createRouter({\r\n+    history:createWebHashHistory(),\r\n+    pa\r\n+})\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712538354815,
+            "name": "Commit-0",
+            "content": "in"
+        }
+    ]
+}

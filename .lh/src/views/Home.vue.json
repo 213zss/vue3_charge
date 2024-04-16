@@ -1,0 +1,266 @@
+{
+    "sourceFile": "src/views/Home.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 62,
+            "patches": [
+                {
+                    "date": 1712585634068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712585643579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n <template>\r\n-   .\r\n+   <div class=\"home\">\r\n+      <div class=\"header\"></div>\r\n+   </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Home\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712585650937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <template>\r\n    <div class=\"home\">\r\n       <div class=\"header\"></div>\r\n+      <div class=\"content\"></div>\r\n    </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Home\" setup>\r\n"
+                },
+                {
+                    "date": 1712585659412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <template>\r\n    <div class=\"home\">\r\n       <div class=\"header\"></div>\r\n       <div class=\"content\"></div>\r\n+      <div class=\"add\"></div>\r\n    </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Home\" setup>\r\n"
+                },
+                {
+                    "date": 1712585675339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n <template>\r\n    <div class=\"home\">\r\n-      <div class=\"header\"></div>\r\n+      <div class=\"header\">\r\n+         <div class=\"type\"></div>\r\n+         <div class=\"data\"></div>\r\n+      </div>\r\n       <div class=\"content\"></div>\r\n       <div class=\"add\"></div>\r\n    </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1712585684074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+<template>\r\n+   <div class=\"home\">\r\n+      <div class=\"header\">\r\n+         <div class=\"type\">\r\n+            \r\n+         </div>\r\n+         <div class=\"data\"></div>\r\n+      </div>\r\n+      <div class=\"content\"></div>\r\n+      <div class=\"add\"></div>\r\n+   </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style lang='scss' scoped>\r\n+  \r\n+</style>\r\n"
+                },
+                {
+                    "date": 1712585711659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n <template>\r\n    <div class=\"home\">\r\n       <div class=\"header\">\r\n          <div class=\"type\">\r\n-            \r\n+            <span class=\"title\">全部类型</span>\r\n+        <i class=\"iconfont icon-type\" />\r\n          </div>\r\n          <div class=\"data\"></div>\r\n       </div>\r\n       <div class=\"content\"></div>\r\n@@ -18,23 +19,4 @@\n \r\n <style lang='scss' scoped>\r\n   \r\n </style>\r\n-<template>\r\n-   <div class=\"home\">\r\n-      <div class=\"header\">\r\n-         <div class=\"type\"></div>\r\n-         <div class=\"data\"></div>\r\n-      </div>\r\n-      <div class=\"content\"></div>\r\n-      <div class=\"add\"></div>\r\n-   </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Home\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style lang='scss' scoped>\r\n-  \r\n-</style>\r\n"
+                },
+                {
+                    "date": 1712585717111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n    <div class=\"home\">\r\n       <div class=\"header\">\r\n          <div class=\"type\">\r\n             <span class=\"title\">全部类型</span>\r\n-        <i class=\"iconfont icon-type\" />\r\n+             <i class=\"iconfont icon-type\"></i>\r\n          </div>\r\n          <div class=\"data\"></div>\r\n       </div>\r\n       <div class=\"content\"></div>\r\n"
+                },
+                {
+                    "date": 1712585797563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n    <div class=\"home\">\r\n       <div class=\"header\">\r\n          <div class=\"type\">\r\n             <span class=\"title\">全部类型</span>\r\n-             <i class=\"iconfont icon-type\"></i>\r\n+            <van-icon name=\"apps-o\" />\r\n          </div>\r\n          <div class=\"data\"></div>\r\n       </div>\r\n       <div class=\"content\"></div>\r\n"
+                },
+                {
+                    "date": 1712585830882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,13 @@\n          <div class=\"type\">\r\n             <span class=\"title\">全部类型</span>\r\n             <van-icon name=\"apps-o\" />\r\n          </div>\r\n-         <div class=\"data\"></div>\r\n+         <div class=\"data\">\r\n+            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n+        <span class=\"expense\">总支出 ¥1000.00</span>\r\n+        <span class=\"income\">总收入 ¥2000.00</span>\r\n+         </div>\r\n       </div>\r\n       <div class=\"content\"></div>\r\n       <div class=\"add\"></div>\r\n    </div>\r\n"
+                },
+                {
+                    "date": 1712585891502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n             <van-icon name=\"apps-o\" />\r\n          </div>\r\n          <div class=\"data\">\r\n             <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n-        <span class=\"expense\">总支出 ¥1000.00</span>\r\n-        <span class=\"income\">总收入 ¥2000.00</span>\r\n+            <span class=\"expense\">总支出 ¥1000.00</span>\r\n+            <span class=\"income\">总收入 ¥2000.00</span>\r\n          </div>\r\n       </div>\r\n       <div class=\"content\"></div>\r\n       <div class=\"add\"></div>\r\n@@ -21,6 +21,8 @@\n \r\n </script>\r\n \r\n <style lang='scss' scoped>\r\n-  \r\n+.home{\r\n+   .\r\n+}\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712585899524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,14 @@\n </script>\r\n \r\n <style lang='scss' scoped>\r\n .home{\r\n-   .\r\n+   .header{\r\n+      .type{\r\n+         background-color: #50ca84;\r\n+      display: inline-block;\r\n+      padding: 6px;\r\n+      border-radius: 4px;\r\n+      }\r\n+   }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712585938293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,12 +24,11 @@\n <style lang='scss' scoped>\r\n .home{\r\n    .header{\r\n       .type{\r\n-         background-color: #50ca84;\r\n-      display: inline-block;\r\n-      padding: 6px;\r\n-      border-radius: 4px;\r\n+         background-color: $primary;\r\n+         padding: 6px;\r\n+         border-radius: 4px;\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712585944707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n       .type{\r\n          background-color: $primary;\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n+         coli\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712585950789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n       .type{\r\n          background-color: $primary;\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n-         coli\r\n+         color: white;\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712585981510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,34 @@\n+<template>\r\n+   <div class=\"home\">\r\n+      <div class=\"header\">\r\n+         <div class=\"type\">\r\n+            <span class=\"title\">全部类型</span>\r\n+            <van-icon name=\"apps-o\" />\r\n+         </div>\r\n+         <div class=\"data\">\r\n+            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n+            <span class=\"expense\">总支出 ¥1000.00</span>\r\n+            <span class=\"income\">总收入 ¥2000.00</span>\r\n+         </div>\r\n+      </div>\r\n+      <div class=\"content\"></div>\r\n+      <div class=\"add\"></div>\r\n+   </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style lang='scss' scoped>\r\n+.home{\r\n+   .header{\r\n+      .type{\r\n+         padding: 6px;\r\n+         border-radius: 4px;\r\n+         color: white;\r\n+      }\r\n+   }\r\n+}\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1712585988915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,44 +23,12 @@\n \r\n <style lang='scss' scoped>\r\n .home{\r\n    .header{\r\n-      .type{\r\n-         padding: 6px;\r\n-         border-radius: 4px;\r\n-         color: white;\r\n-      }\r\n-   }\r\n-}\r\n-</style>\r\n-<template>\r\n-   <div class=\"home\">\r\n-      <div class=\"header\">\r\n-         <div class=\"type\">\r\n-            <span class=\"title\">全部类型</span>\r\n-            <van-icon name=\"apps-o\" />\r\n-         </div>\r\n-         <div class=\"data\">\r\n-            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n-            <span class=\"expense\">总支出 ¥1000.00</span>\r\n-            <span class=\"income\">总收入 ¥2000.00</span>\r\n-         </div>\r\n-      </div>\r\n-      <div class=\"content\"></div>\r\n-      <div class=\"add\"></div>\r\n-   </div>\r\n-</template>\r\n+      background-color: $primary;\r\n \r\n-<script lang=\"ts\" name=\"Home\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style lang='scss' scoped>\r\n-.home{\r\n-   .header{\r\n       .type{\r\n-         background-color: $primary;\r\n+         background-color: #50ca84;\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          color: white;\r\n       }\r\n"
+                },
+                {
+                    "date": 1712586003245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n       background-color: $primary;\r\n \r\n       .type{\r\n          background-color: #50ca84;\r\n+         background-color: #50ca84;\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          color: white;\r\n       }\r\n"
+                },
+                {
+                    "date": 1712586020251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n    .header{\r\n       background-color: $primary;\r\n \r\n       .type{\r\n+         di\r\n          background-color: #50ca84;\r\n-         background-color: #50ca84;\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          color: white;\r\n       }\r\n"
+                },
+                {
+                    "date": 1712586028515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n    .header{\r\n       background-color: $primary;\r\n \r\n       .type{\r\n-         di\r\n-         background-color: #50ca84;\r\n+         display: inline-block;\r\n+         background-color:rg;\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          color: white;\r\n       }\r\n"
+                },
+                {
+                    "date": 1712586034420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,38 @@\n+<template>\r\n+   <div class=\"home\">\r\n+      <div class=\"header\">\r\n+         <div class=\"type\">\r\n+            <span class=\"title\">全部类型</span>\r\n+            <van-icon name=\"apps-o\" />\r\n+         </div>\r\n+         <div class=\"data\">\r\n+            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n+            <span class=\"expense\">总支出 ¥1000.00</span>\r\n+            <span class=\"income\">总收入 ¥2000.00</span>\r\n+         </div>\r\n+      </div>\r\n+      <div class=\"content\"></div>\r\n+      <div class=\"add\"></div>\r\n+   </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style lang='scss' scoped>\r\n+.home{\r\n+   .header{\r\n+      background-color: $primary;\r\n+\r\n+      .type{\r\n+         display: inline-block;\r\n+         background-color:rgba($color: #000000, $alpha:.3);\r\n+         padding: 6px;\r\n+         border-radius: 4px;\r\n+         color: white;\r\n+      }\r\n+   }\r\n+}\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1712586047008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,50 +27,12 @@\n       background-color: $primary;\r\n \r\n       .type{\r\n          display: inline-block;\r\n-         background-color:rgba($color: #000000, $alpha:.3);\r\n+         background-color:rgba($color: #fff, $alpha: .1);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          color: white;\r\n       }\r\n    }\r\n }\r\n </style>\r\n-<template>\r\n-   <div class=\"home\">\r\n-      <div class=\"header\">\r\n-         <div class=\"type\">\r\n-            <span class=\"title\">全部类型</span>\r\n-            <van-icon name=\"apps-o\" />\r\n-         </div>\r\n-         <div class=\"data\">\r\n-            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n-            <span class=\"expense\">总支出 ¥1000.00</span>\r\n-            <span class=\"income\">总收入 ¥2000.00</span>\r\n-         </div>\r\n-      </div>\r\n-      <div class=\"content\"></div>\r\n-      <div class=\"add\"></div>\r\n-   </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Home\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style lang='scss' scoped>\r\n-.home{\r\n-   .header{\r\n-      background-color: $primary;\r\n-\r\n-      .type{\r\n-         display: inline-block;\r\n-         background-color:rg;\r\n-         padding: 6px;\r\n-         border-radius: 4px;\r\n-         color: white;\r\n-      }\r\n-   }\r\n-}\r\n-</style>\r\n"
+                },
+                {
+                    "date": 1712586054446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n       background-color: $primary;\r\n \r\n       .type{\r\n          display: inline-block;\r\n-         background-color:rgba($color: #fff, $alpha: .1);\r\n+         background-color:rgba($color: #fff, $alpha: .12;\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          color: white;\r\n       }\r\n"
+                },
+                {
+                    "date": 1712586060133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n       background-color: $primary;\r\n \r\n       .type{\r\n          display: inline-block;\r\n-         background-color:rgba($color: #fff, $alpha: .12;\r\n+         background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          color: white;\r\n       }\r\n"
+                },
+                {
+                    "date": 1712586083751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n \r\n <style lang='scss' scoped>\r\n .home{\r\n    .header{\r\n+      di\r\n       background-color: $primary;\r\n \r\n       .type{\r\n          display: inline-block;\r\n"
+                },
+                {
+                    "date": 1712586091523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,40 @@\n+<template>\r\n+   <div class=\"home\">\r\n+      <div class=\"header\">\r\n+         <div class=\"type\">\r\n+            <span class=\"title\">全部类型</span>\r\n+            <van-icon name=\"apps-o\" />\r\n+         </div>\r\n+         <div class=\"data\">\r\n+            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n+            <span class=\"expense\">总支出 ¥1000.00</span>\r\n+            <span class=\"income\">总收入 ¥2000.00</span>\r\n+         </div>\r\n+      </div>\r\n+      <div class=\"content\"></div>\r\n+      <div class=\"add\"></div>\r\n+   </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style lang='scss' scoped>\r\n+.home{\r\n+   .header{\r\n+      display: flex;\r\n+      align-content: center;\r\n+      background-color: $primary;\r\n+\r\n+      .type{\r\n+         display: inline-block;\r\n+         background-color:rgba($color: #fff, $alpha: .2);\r\n+         padding: 6px;\r\n+         border-radius: 4px;\r\n+         color: white;\r\n+      }\r\n+   }\r\n+}\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1712586096910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n <style lang='scss' scoped>\r\n .home{\r\n    .header{\r\n       display: flex;\r\n-      align-content: center;\r\n+      fdi\r\n       background-color: $primary;\r\n \r\n       .type{\r\n          display: inline-block;\r\n@@ -37,43 +37,4 @@\n       }\r\n    }\r\n }\r\n </style>\r\n-<template>\r\n-   <div class=\"home\">\r\n-      <div class=\"header\">\r\n-         <div class=\"type\">\r\n-            <span class=\"title\">全部类型</span>\r\n-            <van-icon name=\"apps-o\" />\r\n-         </div>\r\n-         <div class=\"data\">\r\n-            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n-            <span class=\"expense\">总支出 ¥1000.00</span>\r\n-            <span class=\"income\">总收入 ¥2000.00</span>\r\n-         </div>\r\n-      </div>\r\n-      <div class=\"content\"></div>\r\n-      <div class=\"add\"></div>\r\n-   </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Home\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style lang='scss' scoped>\r\n-.home{\r\n-   .header{\r\n-      di\r\n-      background-color: $primary;\r\n-\r\n-      .type{\r\n-         display: inline-block;\r\n-         background-color:rgba($color: #fff, $alpha: .2);\r\n-         padding: 6px;\r\n-         border-radius: 4px;\r\n-         color: white;\r\n-      }\r\n-   }\r\n-}\r\n-</style>\r\n"
+                },
+                {
+                    "date": 1712586138301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,12 +24,13 @@\n <style lang='scss' scoped>\r\n .home{\r\n    .header{\r\n       display: flex;\r\n-      fdi\r\n+      flex-direction: column;\r\n       background-color: $primary;\r\n \r\n       .type{\r\n+         po\r\n          display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n"
+                },
+                {
+                    "date": 1712586144599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,40 @@\n+<template>\r\n+   <div class=\"home\">\r\n+      <div class=\"header\">\r\n+         <div class=\"type\">\r\n+            <span class=\"title\">全部类型</span>\r\n+            <van-icon name=\"apps-o\" />\r\n+         </div>\r\n+         <div class=\"data\">\r\n+            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n+            <span class=\"expense\">总支出 ¥1000.00</span>\r\n+            <span class=\"income\">总收入 ¥2000.00</span>\r\n+         </div>\r\n+      </div>\r\n+      <div class=\"content\"></div>\r\n+      <div class=\"add\"></div>\r\n+   </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style lang='scss' scoped>\r\n+.home{\r\n+   .header{\r\n+      display: flex;\r\n+      flex-direction: column;\r\n+      background-color: $primary;\r\n+\r\n+      .type{\r\n+         display: inline-block;\r\n+         background-color:rgba($color: #fff, $alpha: .2);\r\n+         padding: 6px;\r\n+         border-radius: 4px;\r\n+         color: white;\r\n+      }\r\n+   }\r\n+}\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1712586171957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,40 @@\n+<template>\r\n+   <div class=\"home\">\r\n+      <div class=\"header\">\r\n+         <div class=\"type\">\r\n+            <span class=\"title\">全部类型</span>\r\n+            <van-icon name=\"apps-o\" />\r\n+         </div>\r\n+         <div class=\"data\">\r\n+            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n+            <span class=\"expense\">总支出 ¥1000.00</span>\r\n+            <span class=\"income\">总收入 ¥2000.00</span>\r\n+         </div>\r\n+      </div>\r\n+      <div class=\"content\"></div>\r\n+      <div class=\"add\"></div>\r\n+   </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style lang='scss' scoped>\r\n+.home{\r\n+   .header{ \r\n+      display: flex;\r\n+      flex-direction: column;\r\n+      background-color: $primary;\r\n+\r\n+      .type{\r\n+         display: inline-block;\r\n+         background-color:rgba($color: #fff, $alpha: .2);\r\n+         padding: 6px;\r\n+         border-radius: 4px;\r\n+         color: white;\r\n+      }\r\n+   }\r\n+}\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1712586192104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n    .header{ \r\n       display: flex;\r\n       flex-direction: column;\r\n       background-color: $primary;\r\n-\r\n+      padding: 20px 20px;\r\n       .type{\r\n          display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n@@ -37,85 +37,4 @@\n       }\r\n    }\r\n }\r\n </style>\r\n-<template>\r\n-   <div class=\"home\">\r\n-      <div class=\"header\">\r\n-         <div class=\"type\">\r\n-            <span class=\"title\">全部类型</span>\r\n-            <van-icon name=\"apps-o\" />\r\n-         </div>\r\n-         <div class=\"data\">\r\n-            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n-            <span class=\"expense\">总支出 ¥1000.00</span>\r\n-            <span class=\"income\">总收入 ¥2000.00</span>\r\n-         </div>\r\n-      </div>\r\n-      <div class=\"content\"></div>\r\n-      <div class=\"add\"></div>\r\n-   </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Home\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style lang='scss' scoped>\r\n-.home{\r\n-   .header{\r\n-      display: flex;\r\n-      flex-direction: column;\r\n-      background-color: $primary;\r\n-\r\n-      .type{\r\n-         display: inline-block;\r\n-         background-color:rgba($color: #fff, $alpha: .2);\r\n-         padding: 6px;\r\n-         border-radius: 4px;\r\n-         color: white;\r\n-      }\r\n-   }\r\n-}\r\n-</style>\r\n-<template>\r\n-   <div class=\"home\">\r\n-      <div class=\"header\">\r\n-         <div class=\"type\">\r\n-            <span class=\"title\">全部类型</span>\r\n-            <van-icon name=\"apps-o\" />\r\n-         </div>\r\n-         <div class=\"data\">\r\n-            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n-            <span class=\"expense\">总支出 ¥1000.00</span>\r\n-            <span class=\"income\">总收入 ¥2000.00</span>\r\n-         </div>\r\n-      </div>\r\n-      <div class=\"content\"></div>\r\n-      <div class=\"add\"></div>\r\n-   </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Home\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style lang='scss' scoped>\r\n-.home{\r\n-   .header{\r\n-      display: flex;\r\n-      flex-direction: column;\r\n-      background-color: $primary;\r\n-\r\n-      .type{\r\n-         po\r\n-         display: inline-block;\r\n-         background-color:rgba($color: #fff, $alpha: .2);\r\n-         padding: 6px;\r\n-         border-radius: 4px;\r\n-         color: white;\r\n-      }\r\n-   }\r\n-}\r\n-</style>\r\n"
+                },
+                {
+                    "date": 1712586206724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,39 @@\n+<template>\r\n+   <div class=\"home\">\r\n+      <div class=\"header\">\r\n+         <div class=\"type\">\r\n+            <span class=\"title\">全部类型</span>\r\n+            <van-icon name=\"apps-o\" />\r\n+         </div>\r\n+         <div class=\"data\">\r\n+            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n+            <span class=\"expense\">总支出 ¥1000.00</span>\r\n+            <span class=\"income\">总收入 ¥2000.00</span>\r\n+         </div>\r\n+      </div>\r\n+      <div class=\"content\"></div>\r\n+      <div class=\"add\"></div>\r\n+   </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Home\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style lang='scss' scoped>\r\n+.home{\r\n+   .header{ \r\n+      display: flex;\r\n+      flex-direction: column;\r\n+      background-color: $primary;\r\n+      padding: 20px;\r\n+      .type{\r\n+         display: inline-block;\r\n+         background-color:rgba($color: #fff, $alpha: .2);\r\n+         padding: 6px;\r\n+         border-radius: 4px;\r\n+      }\r\n+   }\r\n+}\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1712586282779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,53 +27,14 @@\n       display: flex;\r\n       flex-direction: column;\r\n       background-color: $primary;\r\n       padding: 20px;\r\n+      color: white;\r\n       .type{\r\n-         display: inline-block;\r\n+         display: inline;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n       }\r\n    }\r\n }\r\n </style>\r\n-<template>\r\n-   <div class=\"home\">\r\n-      <div class=\"header\">\r\n-         <div class=\"type\">\r\n-            <span class=\"title\">全部类型</span>\r\n-            <van-icon name=\"apps-o\" />\r\n-         </div>\r\n-         <div class=\"data\">\r\n-            <span class=\"time\"> 2020-12 <i class=\"iconfont icon-sort-down\" /></span>\r\n-            <span class=\"expense\">总支出 ¥1000.00</span>\r\n-            <span class=\"income\">总收入 ¥2000.00</span>\r\n-         </div>\r\n-      </div>\r\n-      <div class=\"content\"></div>\r\n-      <div class=\"add\"></div>\r\n-   </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Home\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style lang='scss' scoped>\r\n-.home{\r\n-   .header{ \r\n-      display: flex;\r\n-      flex-direction: column;\r\n-      background-color: $primary;\r\n-      padding: 20px 20px;\r\n-      .type{\r\n-         display: inline-block;\r\n-         background-color:rgba($color: #fff, $alpha: .2);\r\n-         padding: 6px;\r\n-         border-radius: 4px;\r\n-         color: white;\r\n-      }\r\n-   }\r\n-}\r\n-</style>\r\n"
+                },
+                {
+                    "date": 1712586316655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,12 +29,13 @@\n       background-color: $primary;\r\n       padding: 20px;\r\n       color: white;\r\n       .type{\r\n-         display: inline;\r\n+         display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n+         mbo\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712586348679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,12 @@\n          display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n-         mbo\r\n+         margin-bottom: 10px;\r\n+         .title{\r\n+            fs\r\n+         }\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712586357624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          .title{\r\n-            fs\r\n+            font-size: 16px;\r\n          }\r\n       }\r\n    }\r\n }\r\n"
+                },
+                {
+                    "date": 1712586382773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,8 @@\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          .title{\r\n-            font-size: 16px;\r\n          }\r\n       }\r\n    }\r\n }\r\n"
+                },
+                {
+                    "date": 1712586388826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,16 +28,17 @@\n       flex-direction: column;\r\n       background-color: $primary;\r\n       padding: 20px;\r\n       color: white;\r\n+      font-size: 14px;\r\n+\r\n       .type{\r\n          display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n-         .title{\r\n-         }\r\n+      \r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712586399024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,10 @@\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n-      \r\n+         .title{\r\n+         }\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712586405242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          .title{\r\n+            bori\r\n          }\r\n       }\r\n    }\r\n }\r\n"
+                },
+                {
+                    "date": 1712586411443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          .title{\r\n-            bori\r\n+            border-right: 1px solid wi;\r\n          }\r\n       }\r\n    }\r\n }\r\n"
+                },
+                {
+                    "date": 1712586422830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,10 @@\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          .title{\r\n-            border-right: 1px solid wi;\r\n+            border-right: 1px solid white;\r\n+            pa\r\n          }\r\n       }\r\n    }\r\n }\r\n"
+                },
+                {
+                    "date": 1712586428141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          .title{\r\n             border-right: 1px solid white;\r\n-            pa\r\n+            padding-right: ;\r\n          }\r\n       }\r\n    }\r\n }\r\n"
+                },
+                {
+                    "date": 1712586437993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,12 +36,9 @@\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n-         .title{\r\n-            border-right: 1px solid white;\r\n-            padding-right: ;\r\n-         }\r\n+        \r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712623406034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,8 @@\n       color: white;\r\n       font-size: 14px;\r\n \r\n       .type{\r\n-         display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n"
+                },
+                {
+                    "date": 1712623451400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n       color: white;\r\n       font-size: 14px;\r\n \r\n       .type{\r\n+         display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n"
+                },
+                {
+                    "date": 1712623694652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n-        \r\n+        ali\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712623702867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n-        ali\r\n+        align-self: ba;\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712623727929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,14 +31,15 @@\n       color: white;\r\n       font-size: 14px;\r\n \r\n       .type{\r\n+         po\r\n          display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n-        align-self: ba;\r\n+         align-self: baseline;\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712623735457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,15 +31,16 @@\n       color: white;\r\n       font-size: 14px;\r\n \r\n       .type{\r\n-         po\r\n+         position: relative;\r\n          display: inline-block;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          align-self: baseline;\r\n+         ::\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712623742795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,11 @@\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          align-self: baseline;\r\n-         ::\r\n+         ::after{\r\n+            content: ;\r\n+         }\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712623748195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,11 @@\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          align-self: baseline;\r\n          ::after{\r\n-            content: ;\r\n+            po\r\n+            content: '';\r\n+\r\n          }\r\n       }\r\n    }\r\n }\r\n"
+                },
+                {
+                    "date": 1712623754313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          align-self: baseline;\r\n          ::after{\r\n-            po\r\n+            position: absolute;\r\n             content: '';\r\n \r\n          }\r\n       }\r\n"
+                },
+                {
+                    "date": 1712623773663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,9 @@\n          align-self: baseline;\r\n          ::after{\r\n             position: absolute;\r\n             content: '';\r\n+            w\r\n \r\n          }\r\n       }\r\n    }\r\n"
+                },
+                {
+                    "date": 1712623779936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,10 @@\n          align-self: baseline;\r\n          ::after{\r\n             position: absolute;\r\n             content: '';\r\n-            w\r\n+            width: 1px;\r\n+            background-color: ;\r\n \r\n          }\r\n       }\r\n    }\r\n"
+                },
+                {
+                    "date": 1712623793571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n          ::after{\r\n             position: absolute;\r\n             content: '';\r\n             width: 1px;\r\n-            background-color: ;\r\n+            background-color: #e9e9e9;\r\n \r\n          }\r\n       }\r\n    }\r\n"
+                },
+                {
+                    "date": 1712623819728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,10 +39,11 @@\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          align-self: baseline;\r\n          ::after{\r\n+            content: '';\r\n+\r\n             position: absolute;\r\n-            content: '';\r\n             width: 1px;\r\n             background-color: #e9e9e9;\r\n \r\n          }\r\n"
+                },
+                {
+                    "date": 1712623827012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,10 +40,10 @@\n          margin-bottom: 10px;\r\n          align-self: baseline;\r\n          ::after{\r\n             content: '';\r\n-\r\n             position: absolute;\r\n+            top: 4PX;\r\n             width: 1px;\r\n             background-color: #e9e9e9;\r\n \r\n          }\r\n"
+                },
+                {
+                    "date": 1712623834405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,9 @@\n             position: absolute;\r\n             top: 4PX;\r\n             width: 1px;\r\n             background-color: #e9e9e9;\r\n+            \r\n \r\n          }\r\n       }\r\n    }\r\n"
+                },
+                {
+                    "date": 1712623840079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n          align-self: baseline;\r\n          ::after{\r\n             content: '';\r\n             position: absolute;\r\n-            top: 4PX;\r\n+            top: 4px;\r\n             width: 1px;\r\n             background-color: #e9e9e9;\r\n             \r\n \r\n"
+                },
+                {
+                    "date": 1712623860513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,17 +38,9 @@\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          align-self: baseline;\r\n-         ::after{\r\n-            content: '';\r\n-            position: absolute;\r\n-            top: 4px;\r\n-            width: 1px;\r\n-            background-color: #e9e9e9;\r\n-            \r\n-\r\n-         }\r\n+         \r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712623867413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,19 @@\n          padding: 6px;\r\n          border-radius: 4px;\r\n          margin-bottom: 10px;\r\n          align-self: baseline;\r\n-         .ti\r\n+         .title{\r\n+            ::after{\r\n+            content: '';\r\n+            position: absolute;\r\n+            top: 4px;\r\n+            width: 1px;\r\n+            background-color: #e9e9e9;\r\n+            \r\n+\r\n+         }\r\n+         }\r\n       }\r\n    }\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712623926367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n             width: 1px;\r\n             background-color: #e9e9e9;\r\n             \r\n \r\n-            }\r\n+            \r\n          }\r\n       }\r\n    }\r\n }\r\n"
+                }
+            ],
+            "date": 1712585634068,
+            "name": "Commit-0",
+            "content": "<template>\r\n   .\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"Home\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style lang='scss' scoped>\r\n  \r\n</style>\r\n"
+        }
+    ]
+}

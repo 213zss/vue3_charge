@@ -1,0 +1,130 @@
+{
+    "sourceFile": "src/views/Account.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1712572910332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712573010090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,12 @@\n-账户\n\\ No newline at end of file\n+<template>\r\n+\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579032511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,18 @@\n <template>\r\n-\r\n+账户\r\n </template>\r\n \r\n-<script lang=\"ts\" name=\"\" setup>\r\n-import {  } from 'vue'\r\n \r\n+<script lang=\"ts\" name=\"About\" setup>\r\n+import {useRouter} from 'vue-router'\r\n+const router = useRouter();\r\n+//返回上一级\r\n+function back(){\r\n+    router.back();\r\n+}\r\n </script>\r\n \r\n+\r\n <style scoped>\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579060894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,18 @@\n <template>\r\n-账户\r\n+<div class=\"account\">\r\n+    <van-nav-bar\r\n+            title=\"关于我们\"\r\n+            left-text=\"返回\"\r\n+            left-arrow\r\n+            @click-left=\"back\"\r\n+            fixed=\"true\"\r\n+            />\r\n+</div>\r\n </template>\r\n \r\n \r\n-<script lang=\"ts\" name=\"About\" setup>\r\n+<script lang=\"ts\" name=\"Account\" setup>\r\n import {useRouter} from 'vue-router'\r\n const router = useRouter();\r\n //返回上一级\r\n function back(){\r\n"
+                },
+                {
+                    "date": 1712579066748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+<template>\r\n+    <div class=\"account\">\r\n+        <van-nav-bar\r\n+                title=\"账户安全\"\r\n+                left-text=\"返回\"\r\n+                left-arrow\r\n+                @click-left=\"back\"\r\n+                fixed=\"true\"\r\n+                />\r\n+    </div>\r\n+</template>\r\n+\r\n+\r\n+<script lang=\"ts\" name=\"Account\" setup>\r\n+import {useRouter} from 'vue-router'\r\n+const router = useRouter();\r\n+//返回上一级\r\n+function back(){\r\n+    router.back();\r\n+}\r\n+</script>\r\n+\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579114954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,13 @@\n                 left-arrow\r\n                 @click-left=\"back\"\r\n                 fixed=\"true\"\r\n                 />\r\n+                <van-cell \r\n+                title=\"账户安全\" \r\n+                icon=\"setting-o\" \r\n+                is-link \r\n+                @click=\"goTo('/account')\"/>\r\n     </div>\r\n </template>\r\n \r\n \r\n@@ -22,31 +27,5 @@\n \r\n \r\n <style scoped>\r\n \r\n-</style>\n-<template>\r\n-<div class=\"account\">\r\n-    <van-nav-bar\r\n-            title=\"关于我们\"\r\n-            left-text=\"返回\"\r\n-            left-arrow\r\n-            @click-left=\"back\"\r\n-            fixed=\"true\"\r\n-            />\r\n-</div>\r\n-</template>\r\n-\r\n-\r\n-<script lang=\"ts\" name=\"Account\" setup>\r\n-import {useRouter} from 'vue-router'\r\n-const router = useRouter();\r\n-//返回上一级\r\n-function back(){\r\n-    router.back();\r\n-}\r\n-</script>\r\n-\r\n-\r\n-<style scoped>\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579121320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,8 @@\n                 left-arrow\r\n                 @click-left=\"back\"\r\n                 fixed=\"true\"\r\n                 />\r\n-                <van-cell \r\n-                title=\"账户安全\" \r\n-                icon=\"setting-o\" \r\n-                is-link \r\n-                @click=\"goTo('/account')\"/>\r\n     </div>\r\n </template>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1712579128208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,14 @@\n                 left-arrow\r\n                 @click-left=\"back\"\r\n                 fixed=\"true\"\r\n                 />\r\n+                \r\n+                <van-cell \r\n+                title=\"账户安全\" \r\n+                icon=\"setting-o\" \r\n+                is-link \r\n+                @click=\"goTo('/account')\"/>\r\n     </div>\r\n </template>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1712579137230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,18 @@\n <template>\r\n     <div class=\"account\">\r\n         <van-nav-bar\r\n-                title=\"账户安全\"\r\n-                left-text=\"返回\"\r\n-                left-arrow\r\n-                @click-left=\"back\"\r\n-                fixed=\"true\"\r\n-                />\r\n-                \r\n-                <van-cell \r\n-                title=\"账户安全\" \r\n-                icon=\"setting-o\" \r\n-                is-link \r\n-                @click=\"goTo('/account')\"/>\r\n+            title=\"账户安全\"\r\n+            left-text=\"返回\"\r\n+            left-arrow\r\n+            @click-left=\"back\"\r\n+            fixed=\"true\"\r\n+            />\r\n+        <van-cell \r\n+            title=\"账户安全\" \r\n+            icon=\"setting-o\" \r\n+            is-link \r\n+            @click=\"goTo('/account')\"/>\r\n     </div>\r\n </template>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1712579144026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n             @click-left=\"back\"\r\n             fixed=\"true\"\r\n             />\r\n         <van-cell \r\n-            title=\"账户安全\" \r\n+            title=\"密码修改\" \r\n             icon=\"setting-o\" \r\n             is-link \r\n             @click=\"goTo('/account')\"/>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1712579163888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,10 @@\n             fixed=\"true\"\r\n             />\r\n         <van-cell \r\n             title=\"密码修改\" \r\n-            icon=\"setting-o\" \r\n             is-link \r\n-            @click=\"goTo('/account')\"/>\r\n+            @click=\"pass\"/>\r\n     </div>\r\n </template>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1712579171739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n             />\r\n         <van-cell \r\n             title=\"密码修改\" \r\n             is-link \r\n-            @click=\"pass\"/>\r\n+            @click=\"passwordVisible\"/>\r\n     </div>\r\n </template>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1712579184123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n \r\n <script lang=\"ts\" name=\"Account\" setup>\r\n import {useRouter} from 'vue-router'\r\n const router = useRouter();\r\n+let passwordVisible\r\n //返回上一级\r\n function back(){\r\n     router.back();\r\n }\r\n"
+                },
+                {
+                    "date": 1712579190303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n <script lang=\"ts\" name=\"Account\" setup>\r\n import {useRouter} from 'vue-router'\r\n const router = useRouter();\r\n-let passwordVisible\r\n+let passwordVisible=ref(false)\r\n //返回上一级\r\n function back(){\r\n     router.back();\r\n }\r\n"
+                },
+                {
+                    "date": 1712579200477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n </template>\r\n \r\n \r\n <script lang=\"ts\" name=\"Account\" setup>\r\n+import { onBeforeMount, reactive, ref } from 'vue'\r\n+\r\n import {useRouter} from 'vue-router'\r\n const router = useRouter();\r\n let passwordVisible=ref(false)\r\n //返回上一级\r\n"
+                },
+                {
+                    "date": 1712579268927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n-<template>\r\n-    <div class=\"account\">\r\n-        <van-nav-bar\r\n+<template><van-nav-bar\r\n             title=\"账户安全\"\r\n             left-text=\"返回\"\r\n             left-arrow\r\n             @click-left=\"back\"\r\n             fixed=\"true\"\r\n             />\r\n+    <div class=\"account\">\r\n+        \r\n         <van-cell \r\n             title=\"密码修改\" \r\n             is-link \r\n             @click=\"passwordVisible\"/>\r\n@@ -15,10 +15,9 @@\n </template>\r\n \r\n \r\n <script lang=\"ts\" name=\"Account\" setup>\r\n-import { onBeforeMount, reactive, ref } from 'vue'\r\n-\r\n+import { ref } from 'vue'\r\n import {useRouter} from 'vue-router'\r\n const router = useRouter();\r\n let passwordVisible=ref(false)\r\n //返回上一级\r\n"
+                },
+                {
+                    "date": 1712579278656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n-<template><van-nav-bar\r\n-            title=\"账户安全\"\r\n-            left-text=\"返回\"\r\n-            left-arrow\r\n-            @click-left=\"back\"\r\n-            fixed=\"true\"\r\n-            />\r\n-    <div class=\"account\">\r\n-        \r\n+<template>\r\n+    <van-nav-bar\r\n+        title=\"账户安全\"\r\n+        left-text=\"返回\"\r\n+        left-arrow\r\n+        @click-left=\"back\"\r\n+        fixed=\"true\"\r\n+        />\r\n+    <div class=\"account\"> \r\n         <van-cell \r\n             title=\"密码修改\" \r\n             is-link \r\n             @click=\"passwordVisible\"/>\r\n"
+                },
+                {
+                    "date": 1712579290855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,7 +26,11 @@\n }\r\n </script>\r\n \r\n \r\n-<style scoped>\r\n-\r\n+<style scoped lang=\"scss\">\r\n+.container{\r\n+    height: calc(100% - 16px);\r\n+    position: relative;\r\n+    padding: 80px 20px 0 20px;\r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579305300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,10 +27,10 @@\n </script>\r\n \r\n \r\n <style scoped lang=\"scss\">\r\n-.container{\r\n+.account{\r\n     height: calc(100% - 16px);\r\n     position: relative;\r\n-    padding: 80px 20px 0 20px;\r\n+    padding: 7px 20px 0 20px;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579312452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n <style scoped lang=\"scss\">\r\n .account{\r\n     height: calc(100% - 16px);\r\n     position: relative;\r\n-    padding: 7px 20px 0 20px;\r\n+    padding: 4% 20px 0 20px;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579321065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n <style scoped lang=\"scss\">\r\n .account{\r\n     height: calc(100% - 16px);\r\n     position: relative;\r\n-    padding: 4% 20px 0 20px;\r\n+    padding: 60px 0 20px;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579359953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,36 @@\n+<template>\r\n+    <van-nav-bar\r\n+        title=\"账户安全\"\r\n+        left-text=\"返回\"\r\n+        left-arrow\r\n+        @click-left=\"back\"\r\n+        fixed=\"true\"\r\n+        />\r\n+    <div class=\"account\"> \r\n+        <van-cell \r\n+            title=\"密码修改\" \r\n+            is-link \r\n+            @click=\"passwordVisible\"/>\r\n+    </div>\r\n+</template>\r\n+\r\n+\r\n+<script lang=\"ts\" name=\"Account\" setup>\r\n+import { ref } from 'vue'\r\n+import {useRouter} from 'vue-router'\r\n+const router = useRouter();\r\n+let passwordVisible=ref(false)\r\n+//返回上一级\r\n+function back(){\r\n+    router.back();\r\n+}\r\n+</script>\r\n+\r\n+\r\n+<style scoped lang=\"scss\">\r\n+.account{\r\n+    height: calc(100% - 16px);\r\n+    position: relative;\r\n+    padding: 50px 0 20px;\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579415494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,36 @@\n+<template>\r\n+    <van-nav-bar\r\n+        title=\"账户安全\"\r\n+        left-text=\"返回\"\r\n+        left-arrow\r\n+        @click-left=\"back\"\r\n+        fixed=\"true\"\r\n+        />\r\n+    <div class=\"account\"> \r\n+        <van-cell \r\n+            title=\"密码修改\" \r\n+            is-link \r\n+            @click=\"passwordVisible\"/>\r\n+    </div>\r\n+</template>\r\n+\r\n+\r\n+<script lang=\"ts\" name=\"Account\" setup>\r\n+import { ref } from 'vue'\r\n+import {useRouter} from 'vue-router'\r\n+const router = useRouter();\r\n+let passwordVisible=ref(false)\r\n+//返回上一级\r\n+function back(){\r\n+    router.back();\r\n+}\r\n+</script>\r\n+\r\n+\r\n+<style scoped lang=\"scss\">\r\n+.account{\r\n+    height: calc(100% - 16px);\r\n+    position: relative;\r\n+    padding: 40px 0 20px;\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579433973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n <style scoped lang=\"scss\">\r\n .account{\r\n     height: calc(100% - 16px);\r\n     position: relative;\r\n-    padding: 40px 0 20px;\r\n+    padding: 45px 0 20px;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579531785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,11 @@\n         <van-cell \r\n             title=\"密码修改\" \r\n             is-link \r\n             @click=\"passwordVisible\"/>\r\n+            <van-button round block type=\"primary\" native-type=\"submit\">\r\n+                登录\r\n+                </van-button>\r\n     </div>\r\n </template>\r\n \r\n \r\n@@ -32,77 +35,5 @@\n     height: calc(100% - 16px);\r\n     position: relative;\r\n     padding: 45px 0 20px;\r\n }\r\n-</style>\n-<template>\r\n-    <van-nav-bar\r\n-        title=\"账户安全\"\r\n-        left-text=\"返回\"\r\n-        left-arrow\r\n-        @click-left=\"back\"\r\n-        fixed=\"true\"\r\n-        />\r\n-    <div class=\"account\"> \r\n-        <van-cell \r\n-            title=\"密码修改\" \r\n-            is-link \r\n-            @click=\"passwordVisible\"/>\r\n-    </div>\r\n-</template>\r\n-\r\n-\r\n-<script lang=\"ts\" name=\"Account\" setup>\r\n-import { ref } from 'vue'\r\n-import {useRouter} from 'vue-router'\r\n-const router = useRouter();\r\n-let passwordVisible=ref(false)\r\n-//返回上一级\r\n-function back(){\r\n-    router.back();\r\n-}\r\n-</script>\r\n-\r\n-\r\n-<style scoped lang=\"scss\">\r\n-.account{\r\n-    height: calc(100% - 16px);\r\n-    position: relative;\r\n-    padding: 50px 0 20px;\r\n-}\r\n-</style>\n-<template>\r\n-    <van-nav-bar\r\n-        title=\"账户安全\"\r\n-        left-text=\"返回\"\r\n-        left-arrow\r\n-        @click-left=\"back\"\r\n-        fixed=\"true\"\r\n-        />\r\n-    <div class=\"account\"> \r\n-        <van-cell \r\n-            title=\"密码修改\" \r\n-            is-link \r\n-            @click=\"passwordVisible\"/>\r\n-    </div>\r\n-</template>\r\n-\r\n-\r\n-<script lang=\"ts\" name=\"Account\" setup>\r\n-import { ref } from 'vue'\r\n-import {useRouter} from 'vue-router'\r\n-const router = useRouter();\r\n-let passwordVisible=ref(false)\r\n-//返回上一级\r\n-function back(){\r\n-    router.back();\r\n-}\r\n-</script>\r\n-\r\n-\r\n-<style scoped lang=\"scss\">\r\n-.account{\r\n-    height: calc(100% - 16px);\r\n-    position: relative;\r\n-    padding: 60px 0 20px;\r\n-}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579540296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n             title=\"密码修改\" \r\n             is-link \r\n             @click=\"passwordVisible\"/>\r\n             <van-button round block type=\"primary\" native-type=\"submit\">\r\n-                登录\r\n-                </van-button>\r\n+                退出    登录\r\n+            </van-button>\r\n     </div>\r\n </template>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1712579550789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,6 +34,7 @@\n .account{\r\n     height: calc(100% - 16px);\r\n     position: relative;\r\n     padding: 45px 0 20px;\r\n+    mabo\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579571230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,7 +34,6 @@\n .account{\r\n     height: calc(100% - 16px);\r\n     position: relative;\r\n     padding: 45px 0 20px;\r\n-    margin-bottom: 20px;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712579603680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,42 @@\n+<template>\r\n+    <van-nav-bar\r\n+        title=\"账户安全\"\r\n+        left-text=\"返回\"\r\n+        left-arrow\r\n+        @click-left=\"back\"\r\n+        fixed=\"true\"\r\n+        />\r\n+    <div class=\"account\"> \r\n+        <van-cell \r\n+            title=\"密码修改\" \r\n+            is-link \r\n+            @click=\"passwordVisible\"/>\r\n+        <van-button round block type=\"primary\" native-type=\"submit\">\r\n+            退出登录\r\n+        </van-button>\r\n+    </div>\r\n+</template>\r\n+\r\n+\r\n+<script lang=\"ts\" name=\"Account\" setup>\r\n+import { ref } from 'vue'\r\n+import {useRouter} from 'vue-router'\r\n+const router = useRouter();\r\n+let passwordVisible=ref(false)\r\n+//返回上一级\r\n+function back(){\r\n+    router.back();\r\n+}\r\n+</script>\r\n+\r\n+\r\n+<style scoped lang=\"scss\">\r\n+.account{\r\n+    height: calc(100% - 16px);\r\n+    position: relative;\r\n+    padding: 45px 0 20px;\r\n+    .van-cell{\r\n+        margin-bottom: 20px;\r\n+    }\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712572910332,
+            "name": "Commit-0",
+            "content": "账户"
+        }
+    ]
+}

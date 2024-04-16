@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/assets/style/variables.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1712543470313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1712543470313,
+            "name": "Commit-0",
+            "content": "@primary: #18b7d3; // 主题色\r\n@danger: #fc3c0c;\r\n@primary-bg: #f5f5f5;\r\n"
+        }
+    ]
+}

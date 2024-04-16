@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/assets/styles/variables.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1712543673548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712543680310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+@primary: #18b7d3; // 主题色\r\n+@danger: #fc3c0c;\r\n+@primary-bg: #f5f5f5;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712545013640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-@primary: #18b7d3; // 主题色\r\n+$primary: #18b7d3; // 主题色\r\n @danger: #fc3c0c;\r\n @primary-bg: #f5f5f5;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712545019989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+$primary: #18b7d3; // 主题色\r\n+$danger: #fc3c0c;\r\n+$primary-bg: #f5f5f5;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712571787808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,3 @@\n-$primary: #18b7d3; // 主题色\r\n+$primary: #1989fa; // 主题色\r\n $danger: #fc3c0c;\r\n-$primary-bg: #f5f5f5;\n-$primary: #18b7d3; // 主题色\r\n-@danger: #fc3c0c;\r\n\\ No newline at end of file\n-@primary-bg: #f5f5f5;\n+$primary-bg: #f5f5f5;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712577226516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-$primary: #1989fa; // 主题色\r\n+$primary:#FAD954; // 主题色\r\n $danger: #fc3c0c;\r\n $primary-bg: #f5f5f5;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712577714144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-$primary:#FAD954; // 主题色\r\n+$primary: #1989fa; // 主题色\r\n $danger: #fc3c0c;\r\n $primary-bg: #f5f5f5;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712801198786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n $primary: #1989fa; // 主题色\r\n $danger: #fc3c0c;\r\n-$primary-bg: #f5f5f5;\n\\ No newline at end of file\n+$primary-bg: #f5f5f5;\r\n+#ecbe25\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712801208136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n $primary: #1989fa; // 主题色\r\n $danger: #fc3c0c;\r\n $primary-bg: #f5f5f5;\r\n-#ecbe25\n\\ No newline at end of file\n+@text-warning:#ecbe25\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712543673548,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

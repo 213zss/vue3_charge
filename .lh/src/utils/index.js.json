@@ -1,0 +1,102 @@
+{
+    "sourceFile": "src/utils/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1712805037338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712824605104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     1: {\r\n       icon: \"icon-canyin\",\r\n     },\r\n     2: {\r\n-      icon: \"icon-fushi\",\r\n+      icon: \"icon-fushi1\",\r\n     },\r\n     3: {\r\n       icon: \"icon-jiaotong\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712824614529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     1: {\r\n       icon: \"icon-canyin\",\r\n     },\r\n     2: {\r\n-      icon: \"icon-fushi1\",\r\n+      icon: \"icon-gongjiao\",\r\n     },\r\n     3: {\r\n       icon: \"icon-jiaotong\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712824624810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     3: {\r\n       icon: \"icon-jiaotong\",\r\n     },\r\n     4: {\r\n-      icon: \"icon-riyongpin\",\r\n+      icon: \"icon-riyongbaihuo\",\r\n     },\r\n     5: {\r\n       icon: \"icon-gouwuchekong\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712824645367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     6: {\r\n       icon: \"icon-xuexi\",\r\n     },\r\n     7: {\r\n-      icon: \"icon-yiliao\",\r\n+      icon: \"icon-yiyaoyuyiliao\",\r\n     },\r\n     8: {\r\n       icon: \"icon-lvxing\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712824926645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     12: {\r\n       icon: \"icon-renminbi\",\r\n     },\r\n     13: {\r\n-      icon: \"icon-jiangjinxiangqing-hover\",\r\n+      icon: \"icon-jiangjinjilu\",\r\n     },\r\n     14: {\r\n       icon: \"icon-licai\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712825014579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n export const typeMap = {\r\n     1: {\r\n-      icon: \"icon-canyin\",\r\n     },\r\n     2: {\r\n       icon: \"icon-gongjiao\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712825020469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,10 @@\n     13: {\r\n       icon: \"icon-jiangjinjilu\",\r\n     },\r\n     14: {\r\n-      icon: \"icon-licai\",\r\n+      icon: \"icon-canyin\",\r\n+\r\n     },\r\n     15: {\r\n       icon: \"icon-tuikuan\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712825026558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,8 @@\n       icon: \"icon-jiangjinjilu\",\r\n     },\r\n     14: {\r\n       icon: \"icon-canyin\",\r\n-\r\n     },\r\n     15: {\r\n       icon: \"icon-tuikuan\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712825036693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n export const typeMap = {\r\n-    1: {\r\n+    1: {      icon: \"icon-riyongbaihuo\",\r\n     },\r\n     2: {\r\n       icon: \"icon-gongjiao\",\r\n     },\r\n     3: {\r\n       icon: \"icon-jiaotong\",\r\n     },\r\n     4: {\r\n-      icon: \"icon-riyongbaihuo\",\r\n+\r\n     },\r\n     5: {\r\n       icon: \"icon-gouwuchekong\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712825041843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     3: {\r\n       icon: \"icon-jiaotong\",\r\n     },\r\n     4: {\r\n-\r\n+        icon: \"icon-licai\",\r\n     },\r\n     5: {\r\n       icon: \"icon-gouwuchekong\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712825049346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n export const typeMap = {\r\n-    1: {      icon: \"icon-riyongbaihuo\",\r\n+    1: {      \r\n+      icon: \"icon-riyongbaihuo\",\r\n     },\r\n     2: {\r\n       icon: \"icon-gongjiao\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712912143795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,50 @@\n+export const typeMap = {\r\n+    1: {      \r\n+      icon: \"icon-riyongbaihuo\",\r\n+    },\r\n+    2: {\r\n+      icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n+    },\r\n+    3: {\r\n+      icon: \"icon-jiaotong\",\r\n+    },\r\n+    4: {\r\n+        icon: \"icon-licai\",\r\n+    },\r\n+    5: {\r\n+      icon: \"icon-gouwuchekong\",\r\n+    },\r\n+    6: {\r\n+      icon: \"icon-xuexi\",\r\n+    },\r\n+    7: {\r\n+      icon: \"icon-yiyaoyuyiliao\",\r\n+    },\r\n+    8: {\r\n+      icon: \"icon-lvxing\",\r\n+    },\r\n+    9: {\r\n+      icon: \"icon-hezuoguanxi\",\r\n+    },\r\n+    10: {\r\n+      icon: \"icon-qita\",\r\n+    },\r\n+    11: {\r\n+      icon: \"icon-gongzi\",\r\n+    },\r\n+    12: {\r\n+      icon: \"icon-renminbi\",\r\n+    },\r\n+    13: {\r\n+      icon: \"icon-jiangjinjilu\",\r\n+    },\r\n+    14: {\r\n+      icon: \"icon-canyin\",\r\n+    },\r\n+    15: {\r\n+      icon: \"icon-tuikuan\",\r\n+    },\r\n+    16: {\r\n+      icon: \"icon-qita\",\r\n+    },\r\n+  };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712912176742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,58 +2,8 @@\n     1: {      \r\n       icon: \"icon-riyongbaihuo\",\r\n     },\r\n     2: {\r\n-      icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n-    },\r\n-    3: {\r\n-      icon: \"icon-jiaotong\",\r\n-    },\r\n-    4: {\r\n-        icon: \"icon-licai\",\r\n-    },\r\n-    5: {\r\n-      icon: \"icon-gouwuchekong\",\r\n-    },\r\n-    6: {\r\n-      icon: \"icon-xuexi\",\r\n-    },\r\n-    7: {\r\n-      icon: \"icon-yiyaoyuyiliao\",\r\n-    },\r\n-    8: {\r\n-      icon: \"icon-lvxing\",\r\n-    },\r\n-    9: {\r\n-      icon: \"icon-hezuoguanxi\",\r\n-    },\r\n-    10: {\r\n-      icon: \"icon-qita\",\r\n-    },\r\n-    11: {\r\n-      icon: \"icon-gongzi\",\r\n-    },\r\n-    12: {\r\n-      icon: \"icon-renminbi\",\r\n-    },\r\n-    13: {\r\n-      icon: \"icon-jiangjinjilu\",\r\n-    },\r\n-    14: {\r\n-      icon: \"icon-canyin\",\r\n-    },\r\n-    15: {\r\n-      icon: \"icon-tuikuan\",\r\n-    },\r\n-    16: {\r\n-      icon: \"icon-qita\",\r\n-    },\r\n-  };\n-export const typeMap = {\r\n-    1: {      \r\n-      icon: \"icon-riyongbaihuo\",\r\n-    },\r\n-    2: {\r\n       icon: \"icon-gongjiao\",\r\n     },\r\n     3: {\r\n       icon: \"icon-jiaotong\",\r\n"
+                },
+                {
+                    "date": 1712912189671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n     1: {      \r\n       icon: \"icon-riyongbaihuo\",\r\n     },\r\n     2: {\r\n-      icon: \"icon-gongjiao\",\r\n+      icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n     },\r\n     3: {\r\n-      icon: \"icon-jiaotong\",\r\n+      icon: \"icon-gongjiao\",\r\n     },\r\n     4: {\r\n         icon: \"icon-licai\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712912287104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     3: {\r\n       icon: \"icon-gongjiao\",\r\n     },\r\n     4: {\r\n-        icon: \"icon-licai\",\r\n+        icon: \"icon-fushi1\",\r\n     },\r\n     5: {\r\n       icon: \"icon-gouwuchekong\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712912339907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,50 @@\n+export const typeMap = {\r\n+    1: {      \r\n+      icon: \"icon-riyongbaihuo\",\r\n+    },\r\n+    2: {\r\n+      icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n+    },\r\n+    3: {\r\n+      icon: \"icon-gongjiao\",\r\n+    },\r\n+    4: {\r\n+        icon: \"icon-fushi1\",\r\n+    },\r\n+    5: {\r\n+      icon: \"icon-gouwuchekong\",\r\n+    },\r\n+    6: {\r\n+      icon: \"icon-xuexi\",\r\n+    },\r\n+    7: {\r\n+      icon: \"icon-yiyaoyuyiliao\",\r\n+    },\r\n+    8: {\r\n+      icon: \"icon-lvxing\",\r\n+    },\r\n+    9: {\r\n+      icon: \"icon-hezuoguanxi\",\r\n+    },\r\n+    10: {\r\n+      icon: \"icon-qita\",\r\n+    },\r\n+    11: {\r\n+      icon: \"icon-gongzi\",\r\n+    },\r\n+    12: {\r\n+      icon: \"icon-renminbi\",\r\n+    },\r\n+    13: {\r\n+      icon: \"icon-jiangjinjilu\",\r\n+    },\r\n+    14: {\r\n+      icon: \"icon-canyin\",\r\n+    },\r\n+    15: {\r\n+      icon: \"icon-fushi1\",\r\n+    },\r\n+    16: {\r\n+      icon: \"icon-qita\",\r\n+    },\r\n+  };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712912489270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export const typeMap = {\r\n     1: {      \r\n-      icon: \"icon-riyongbaihuo\",\r\n+      icon: \"icon-riyongbaihuo\",//\r\n     },\r\n     2: {\r\n       icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n     },\r\n@@ -46,55 +46,5 @@\n     },\r\n     16: {\r\n       icon: \"icon-qita\",\r\n     },\r\n-  };\n-export const typeMap = {\r\n-    1: {      \r\n-      icon: \"icon-riyongbaihuo\",\r\n-    },\r\n-    2: {\r\n-      icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n-    },\r\n-    3: {\r\n-      icon: \"icon-gongjiao\",\r\n-    },\r\n-    4: {\r\n-        icon: \"icon-fushi1\",\r\n-    },\r\n-    5: {\r\n-      icon: \"icon-gouwuchekong\",\r\n-    },\r\n-    6: {\r\n-      icon: \"icon-xuexi\",\r\n-    },\r\n-    7: {\r\n-      icon: \"icon-yiyaoyuyiliao\",\r\n-    },\r\n-    8: {\r\n-      icon: \"icon-lvxing\",\r\n-    },\r\n-    9: {\r\n-      icon: \"icon-hezuoguanxi\",\r\n-    },\r\n-    10: {\r\n-      icon: \"icon-qita\",\r\n-    },\r\n-    11: {\r\n-      icon: \"icon-gongzi\",\r\n-    },\r\n-    12: {\r\n-      icon: \"icon-renminbi\",\r\n-    },\r\n-    13: {\r\n-      icon: \"icon-jiangjinjilu\",\r\n-    },\r\n-    14: {\r\n-      icon: \"icon-canyin\",\r\n-    },\r\n-    15: {\r\n-      icon: \"icon-tuikuan\",\r\n-    },\r\n-    16: {\r\n-      icon: \"icon-qita\",\r\n-    },\r\n   };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712912501119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export const typeMap = {\r\n     1: {      \r\n-      icon: \"icon-riyongbaihuo\",//\r\n+      icon: \"icon-riyongbaihuo\",//s\r\n     },\r\n     2: {\r\n       icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712912514020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export const typeMap = {\r\n     1: {      \r\n-      icon: \"icon-riyongbaihuo\",//s\r\n+      icon: \"icon-riyongbaihuo\",//生活\r\n     },\r\n     2: {\r\n       icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n     },\r\n@@ -38,9 +38,9 @@\n     13: {\r\n       icon: \"icon-jiangjinjilu\",\r\n     },\r\n     14: {\r\n-      icon: \"icon-canyin\",\r\n+      icon: \"icon-canyin\",//餐饮\r\n     },\r\n     15: {\r\n       icon: \"icon-fushi1\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712912540908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n     14: {\r\n       icon: \"icon-canyin\",//餐饮\r\n     },\r\n     15: {\r\n-      icon: \"icon-fushi1\",\r\n+      icon: \"icon-fushi1\",//服饰\r\n     },\r\n     16: {\r\n       icon: \"icon-qita\",\r\n     },\r\n"
+                },
+                {
+                    "date": 1712912546729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     1: {      \r\n       icon: \"icon-riyongbaihuo\",//生活\r\n     },\r\n     2: {\r\n-      icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",\r\n+      icon: \"icon-airudiantubiaohuizhi-zhuanqu_tiyushijie\",//体育\r\n     },\r\n     3: {\r\n       icon: \"icon-gongjiao\",\r\n     },\r\n"
+                }
+            ],
+            "date": 1712805037338,
+            "name": "Commit-0",
+            "content": "export const typeMap = {\r\n    1: {\r\n      icon: \"icon-canyin\",\r\n    },\r\n    2: {\r\n      icon: \"icon-fushi\",\r\n    },\r\n    3: {\r\n      icon: \"icon-jiaotong\",\r\n    },\r\n    4: {\r\n      icon: \"icon-riyongpin\",\r\n    },\r\n    5: {\r\n      icon: \"icon-gouwuchekong\",\r\n    },\r\n    6: {\r\n      icon: \"icon-xuexi\",\r\n    },\r\n    7: {\r\n      icon: \"icon-yiliao\",\r\n    },\r\n    8: {\r\n      icon: \"icon-lvxing\",\r\n    },\r\n    9: {\r\n      icon: \"icon-hezuoguanxi\",\r\n    },\r\n    10: {\r\n      icon: \"icon-qita\",\r\n    },\r\n    11: {\r\n      icon: \"icon-gongzi\",\r\n    },\r\n    12: {\r\n      icon: \"icon-renminbi\",\r\n    },\r\n    13: {\r\n      icon: \"icon-jiangjinxiangqing-hover\",\r\n    },\r\n    14: {\r\n      icon: \"icon-licai\",\r\n    },\r\n    15: {\r\n      icon: \"icon-tuikuan\",\r\n    },\r\n    16: {\r\n      icon: \"icon-qita\",\r\n    },\r\n  };"
+        }
+    ]
+}

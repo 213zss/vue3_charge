@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/router/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1712644079983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712892132983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n             path:'/about',\r\n             component:About\r\n         },\r\n         {\r\n-            path:'/detaill/:id',\r\n+            path:'/detail',\r\n             component:Detail\r\n         },\r\n         \r\n     ]\r\n"
+                }
+            ],
+            "date": 1712644079983,
+            "name": "Commit-0",
+            "content": "import { createRouter,createWebHashHistory } from \"vue-router\";\r\nimport Home from '../views/Home.vue';\r\nimport Data from '../views/Data.vue'\r\nimport User from '../views/User.vue'\r\nimport Login from '../views/Login.vue'\r\nimport Account from '../views/Account.vue'\r\nimport About from '../views/About.vue'\r\nimport Detail from '../views/Detail.vue'\r\nconst router=createRouter({\r\n    history:createWebHashHistory(),\r\n    routes:[\r\n        {\r\n            path:'/',\r\n            redirect:'/login'\r\n        },\r\n        {\r\n            path:'/login',\r\n            component:Login\r\n        },\r\n        {\r\n            path:'/home',\r\n            component:Home\r\n        },\r\n        {\r\n            path:'/data',\r\n            component:Data\r\n        },\r\n        {\r\n            path:'/user',\r\n            component:User\r\n        },\r\n        {\r\n            path:'/account',\r\n            component:Account\r\n        },\r\n        {\r\n            path:'/about',\r\n            component:About\r\n        },\r\n        {\r\n            path:'/detaill/:id',\r\n            component:Detail\r\n        },\r\n        \r\n    ]\r\n})\r\nexport default router;"
+        }
+    ]
+}

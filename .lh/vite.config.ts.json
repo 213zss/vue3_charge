@@ -1,0 +1,102 @@
+{
+    "sourceFile": "vite.config.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1712539560454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712539583445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,14 @@\n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [\n     vue(),\n+    AutoImport({\n+      resolvers: [VantResolver()],\n+    }),\n+    Components({\n+      resolvers: [VantResolver()],\n+    }),\n   ],\n   resolve: {\n     alias: {\n       '@': fileURLToPath(new URL('./src', import.meta.url))\n"
+                },
+                {
+                    "date": 1712540811921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import vue from '@vitejs/plugin-vue'\n import AutoImport from 'unplugin-auto-import/vite';\n import Components from 'unplugin-vue-components/vite';\n import { VantResolver } from '@vant/auto-import-resolver';\n+import postCssPxToRem from \"postcss-pxtorem\"\n \n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [\n"
+                },
+                {
+                    "date": 1712540836066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,6 +21,17 @@\n   resolve: {\n     alias: {\n       '@': fileURLToPath(new URL('./src', import.meta.url))\n     }\n+  }，\n+  css: {\n+    postcss: {\n+      plugins: [\n+        postCssPxToRem({\n+          rootValue: 37.5, // 1rem的大小\n+          propList: ['*'], // 需要转换的属性，这里选择全部都进行转换\n+          selectorBlackList: [\".norem\"], // 过滤掉.norem-开头的 class，不进行 rem 转换\n+        })\n+      ]\n+    }\n   }\n })\n"
+                },
+                {
+                    "date": 1712540844556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,37 @@\n+import { fileURLToPath, URL } from 'node:url'\n+\n+import { defineConfig } from 'vite'\n+import vue from '@vitejs/plugin-vue'\n+import AutoImport from 'unplugin-auto-import/vite';\n+import Components from 'unplugin-vue-components/vite';\n+import { VantResolver } from '@vant/auto-import-resolver';\n+import postCssPxToRem from \"postcss-pxtorem\"\n+\n+// https://vitejs.dev/config/\n+export default defineConfig({\n+  plugins: [\n+    vue(),\n+    AutoImport({\n+      resolvers: [VantResolver()],\n+    }),\n+    Components({\n+      resolvers: [VantResolver()],\n+    }),\n+  ],\n+  resolve: {\n+    alias: {\n+      '@': fileURLToPath(new URL('./src', import.meta.url))\n+    }\n+  },  \n+  css: {\n+    postcss: {\n+      plugins: [\n+        postCssPxToRem({\n+          rootValue: 37.5, // 1rem的大小\n+          propList: ['*'], // 需要转换的属性，这里选择全部都进行转换\n+          selectorBlackList: [\".norem\"], // 过滤掉.norem-开头的 class，不进行 rem 转换\n+        })\n+      ]\n+    }\n+  }\n+})\n"
+                },
+                {
+                    "date": 1712541809085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,44 +31,12 @@\n           propList: ['*'], // 需要转换的属性，这里选择全部都进行转换\n           selectorBlackList: [\".norem\"], // 过滤掉.norem-开头的 class，不进行 rem 转换\n         })\n       ]\n+    },\n+    preprocessorOptions: {\n+      scss: {\n+        additionalData: \"@import '@/assets/styles/variables.scss';\"\n+      }\n     }\n   }\n })\n-import { fileURLToPath, URL } from 'node:url'\n-\n-import { defineConfig } from 'vite'\n-import vue from '@vitejs/plugin-vue'\n-import AutoImport from 'unplugin-auto-import/vite';\n-import Components from 'unplugin-vue-components/vite';\n-import { VantResolver } from '@vant/auto-import-resolver';\n-import postCssPxToRem from \"postcss-pxtorem\"\n-\n-// https://vitejs.dev/config/\n-export default defineConfig({\n-  plugins: [\n-    vue(),\n-    AutoImport({\n-      resolvers: [VantResolver()],\n-    }),\n-    Components({\n-      resolvers: [VantResolver()],\n-    }),\n-  ],\n-  resolve: {\n-    alias: {\n-      '@': fileURLToPath(new URL('./src', import.meta.url))\n-    }\n-  }，\n-  css: {\n-    postcss: {\n-      plugins: [\n-        postCssPxToRem({\n-          rootValue: 37.5, // 1rem的大小\n-          propList: ['*'], // 需要转换的属性，这里选择全部都进行转换\n-          selectorBlackList: [\".norem\"], // 过滤掉.norem-开头的 class，不进行 rem 转换\n-        })\n-      ]\n-    }\n-  }\n-})\n"
+                },
+                {
+                    "date": 1712541866559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import AutoImport from 'unplugin-auto-import/vite';\n import Components from 'unplugin-vue-components/vite';\n import { VantResolver } from '@vant/auto-import-resolver';\n import postCssPxToRem from \"postcss-pxtorem\"\n-\n+import path from 'path'\n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [\n     vue(),\n"
+                },
+                {
+                    "date": 1712541872750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,13 @@\n import Components from 'unplugin-vue-components/vite';\n import { VantResolver } from '@vant/auto-import-resolver';\n import postCssPxToRem from \"postcss-pxtorem\"\n import path from 'path'\n+function _resolve(dir: string) {\n+  return path.resolve(__dirname, dir)\n+}\n+\n+\n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [\n     vue(),\n"
+                },
+                {
+                    "date": 1712541890586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,11 @@\n   resolve: {\n     alias: {\n       '@': fileURLToPath(new URL('./src', import.meta.url))\n     }\n+    alias: {\n+      '@': _resolve('src'),\n+    },\n   },  \n   css: {\n     postcss: {\n       plugins: [\n"
+                },
+                {
+                    "date": 1712542576262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n import AutoImport from 'unplugin-auto-import/vite';\n import Components from 'unplugin-vue-components/vite';\n import { VantResolver } from '@vant/auto-import-resolver';\n import postCssPxToRem from \"postcss-pxtorem\"\n-import path from 'path'\n-function _resolve(dir: string) {\n-  return path.resolve(__dirname, dir)\n-}\n+// import path from 'path'\n+// function _resolve(dir: string) {\n+//   return path.resolve(__dirname, dir)\n+// }\n \n \n // https://vitejs.dev/config/\n export default defineConfig({\n@@ -23,12 +23,12 @@\n       resolvers: [VantResolver()],\n     }),\n   ],\n   resolve: {\n+    // alias: {\n+    //   '@': fileURLToPath(new URL('./src', import.meta.url))\n+    // }\n     alias: {\n-      '@': fileURLToPath(new URL('./src', import.meta.url))\n-    }\n-    alias: {\n       '@': _resolve('src'),\n     },\n   },  \n   css: {\n"
+                },
+                {
+                    "date": 1712542589966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,12 @@\n       resolvers: [VantResolver()],\n     }),\n   ],\n   resolve: {\n-    // alias: {\n-    //   '@': fileURLToPath(new URL('./src', import.meta.url))\n-    // }\n     alias: {\n+      '@': fileURLToPath(new URL('./src', import.meta.url))\n+    }\n+    alias: {\n       '@': _resolve('src'),\n     },\n   },  \n   css: {\n"
+                },
+                {
+                    "date": 1712542650034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,12 @@\n       resolvers: [VantResolver()],\n     }),\n   ],\n   resolve: {\n+    // alias: {\n+    //   '@': fileURLToPath(new URL('./src', import.meta.url))\n+    // }\n     alias: {\n-      '@': fileURLToPath(new URL('./src', import.meta.url))\n-    }\n-    alias: {\n       '@': _resolve('src'),\n     },\n   },  \n   css: {\n"
+                },
+                {
+                    "date": 1712542668213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,49 @@\n+import { fileURLToPath, URL } from 'node:url'\n+\n+import { defineConfig } from 'vite'\n+import vue from '@vitejs/plugin-vue'\n+import AutoImport from 'unplugin-auto-import/vite';\n+import Components from 'unplugin-vue-components/vite';\n+import { VantResolver } from '@vant/auto-import-resolver';\n+import postCssPxToRem from \"postcss-pxtorem\"\n+import path from 'path'\n+function _resolve(dir: string) {\n+  return path.resolve(__dirname, dir)\n+}\n+\n+// https://vitejs.dev/config/\n+export default defineConfig({\n+  plugins: [\n+    vue(),\n+    AutoImport({\n+      resolvers: [VantResolver()],\n+    }),\n+    Components({\n+      resolvers: [VantResolver()],\n+    }),\n+  ],\n+  resolve: {\n+    // alias: {\n+    //   '@': fileURLToPath(new URL('./src', import.meta.url))\n+    // }\n+    alias: {\n+      '@': _resolve('src'),\n+    },\n+  },  \n+  css: {\n+    postcss: {\n+      plugins: [\n+        postCssPxToRem({\n+          rootValue: 37.5, // 1rem的大小\n+          propList: ['*'], // 需要转换的属性，这里选择全部都进行转换\n+          selectorBlackList: [\".norem\"], // 过滤掉.norem-开头的 class，不进行 rem 转换\n+        })\n+      ]\n+    },\n+    preprocessorOptions: {\n+      scss: {\n+        additionalData: \"@import '@/assets/styles/variables.scss';\"\n+      }\n+    }\n+  }\n+})\n"
+                },
+                {
+                    "date": 1712544113933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,61 +22,11 @@\n       resolvers: [VantResolver()],\n     }),\n   ],\n   resolve: {\n-    // alias: {\n-    //   '@': fileURLToPath(new URL('./src', import.meta.url))\n-    // }\n     alias: {\n-      '@': _resolve('src'),\n-    },\n-  },  \n-  css: {\n-    postcss: {\n-      plugins: [\n-        postCssPxToRem({\n-          rootValue: 37.5, // 1rem的大小\n-          propList: ['*'], // 需要转换的属性，这里选择全部都进行转换\n-          selectorBlackList: [\".norem\"], // 过滤掉.norem-开头的 class，不进行 rem 转换\n-        })\n-      ]\n-    },\n-    preprocessorOptions: {\n-      scss: {\n-        additionalData: \"@import '@/assets/styles/variables.scss';\"\n-      }\n+      '@': fileURLToPath(new URL('./src', import.meta.url))\n     }\n-  }\n-})\n-import { fileURLToPath, URL } from 'node:url'\n-\n-import { defineConfig } from 'vite'\n-import vue from '@vitejs/plugin-vue'\n-import AutoImport from 'unplugin-auto-import/vite';\n-import Components from 'unplugin-vue-components/vite';\n-import { VantResolver } from '@vant/auto-import-resolver';\n-import postCssPxToRem from \"postcss-pxtorem\"\n-// import path from 'path'\n-// function _resolve(dir: string) {\n-//   return path.resolve(__dirname, dir)\n-// }\n-\n-\n-// https://vitejs.dev/config/\n-export default defineConfig({\n-  plugins: [\n-    vue(),\n-    AutoImport({\n-      resolvers: [VantResolver()],\n-    }),\n-    Components({\n-      resolvers: [VantResolver()],\n-    }),\n-  ],\n-  resolve: {\n-    // alias: {\n-    //   '@': fileURLToPath(new URL('./src', import.meta.url))\n-    // }\n     alias: {\n       '@': _resolve('src'),\n     },\n   },  \n"
+                },
+                {
+                    "date": 1712544134186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,12 @@\n       resolvers: [VantResolver()],\n     }),\n   ],\n   resolve: {\n+    // alias: {\n+    //   '@': fileURLToPath(new URL('./src', import.meta.url))\n+    // }\n     alias: {\n-      '@': fileURLToPath(new URL('./src', import.meta.url))\n-    }\n-    alias: {\n       '@': _resolve('src'),\n     },\n   },  \n   css: {\n"
+                },
+                {
+                    "date": 1712544304622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,8 @@\n       resolvers: [VantResolver()],\n     }),\n   ],\n   resolve: {\n-    // alias: {\n-    //   '@': fileURLToPath(new URL('./src', import.meta.url))\n-    // }\n     alias: {\n       '@': _resolve('src'),\n     },\n   },  \n"
+                },
+                {
+                    "date": 1712544537222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       ]\n     },\n     preprocessorOptions: {\n       scss: {\n-        additionalData: \"@import '@/assets/styles/variables.scss';\"\n+        additionalData: \"@import ./src//assets/styles/variables.scss';\"\n       }\n     }\n   }\n })\n"
+                },
+                {
+                    "date": 1712544550289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       ]\n     },\n     preprocessorOptions: {\n       scss: {\n-        additionalData: \"@import ./src//assets/styles/variables.scss';\"\n+        additionalData: \"@import ./assets/styles/variables.scss';\"\n       }\n     }\n   }\n })\n"
+                },
+                {
+                    "date": 1712544555520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       ]\n     },\n     preprocessorOptions: {\n       scss: {\n-        additionalData: \"@import ./assets/styles/variables.scss';\"\n+        additionalData: \"@import assets/styles/variables.scss';\"\n       }\n     }\n   }\n })\n"
+                },
+                {
+                    "date": 1712544560913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       ]\n     },\n     preprocessorOptions: {\n       scss: {\n-        additionalData: \"@import assets/styles/variables.scss';\"\n+        additionalData: \"@import '@/assets/styles/variables.scss';\"\n       }\n     }\n   }\n })\n"
+                },
+                {
+                    "date": 1712544581103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       ]\n     },\n     preprocessorOptions: {\n       scss: {\n-        additionalData: \"@import '@/assets/styles/variables.scss';\"\n+        additionalData: \"@import '.src/assets/styles/variables.scss';\"\n       }\n     }\n   }\n })\n"
+                },
+                {
+                    "date": 1712544619486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       ]\n     },\n     preprocessorOptions: {\n       scss: {\n-        additionalData: \"@import './src/assets/styles/variables.scss';\"\n+        additionalData: \"@import '@/assets/styles/variables.scss';\"\n       }\n     }\n   }\n })\n"
+                }
+            ],
+            "date": 1712539560454,
+            "name": "Commit-0",
+            "content": "import { fileURLToPath, URL } from 'node:url'\n\nimport { defineConfig } from 'vite'\nimport vue from '@vitejs/plugin-vue'\nimport AutoImport from 'unplugin-auto-import/vite';\nimport Components from 'unplugin-vue-components/vite';\nimport { VantResolver } from '@vant/auto-import-resolver';\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n  plugins: [\n    vue(),\n  ],\n  resolve: {\n    alias: {\n      '@': fileURLToPath(new URL('./src', import.meta.url))\n    }\n  }\n})\n"
+        }
+    ]
+}

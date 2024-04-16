@@ -1,0 +1,106 @@
+{
+    "sourceFile": "src/views/Login.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1712546345866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712557264957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n-\r\n+登录\r\n </template>\r\n \r\n-<script lang=\"ts\" name=\"\" setup>\r\n+<script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n \r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1712559146273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,12 @@\n <template>\r\n-登录\r\n+<van-nav-bar\r\n+  title=\"标题\"\r\n+  left-text=\"返回\"\r\n+  left-arrow\r\n+  @click-left=\"onClickLeft\"\r\n+/>\r\n+\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712559151808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n <van-nav-bar\r\n-  title=\"标题\"\r\n+  title=\"登录注册\"\r\n   left-text=\"返回\"\r\n   left-arrow\r\n   @click-left=\"onClickLeft\"\r\n />\r\n"
+                },
+                {
+                    "date": 1712559167571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <template>\r\n-<van-nav-bar\r\n-  title=\"登录注册\"\r\n-  left-text=\"返回\"\r\n-  left-arrow\r\n-  @click-left=\"onClickLeft\"\r\n-/>\r\n+    <van-nav-bar\r\n+    title=\"登录注册\"\r\n+    left-text=\"返回\"\r\n+    left-arrow\r\n+    @click-left=\"onClickLeft\"\r\n+    />\r\n \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n"
+                },
+                {
+                    "date": 1712559182022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     <van-nav-bar\r\n     title=\"登录注册\"\r\n     left-text=\"返回\"\r\n     left-arrow\r\n-    @click-left=\"onClickLeft\"\r\n+    @click-left=\"back\"\r\n     />\r\n \r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712559197854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n-\r\n+function \r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712559203702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n-function \r\n+function back(){\r\n+    \r\n+}\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712559209838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,11 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n+import \r\n function back(){\r\n-    \r\n+\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712559217015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n-import \r\n+import {}\r\n function back(){\r\n \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712559223170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n-import {}\r\n+import {useRou}\r\n function back(){\r\n \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712559228604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n-import {useRou}\r\n+import {}\r\n function back(){\r\n \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712559237979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n import {}\r\n+use\r\n function back(){\r\n \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712559246871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n-import {}\r\n-use\r\n+import {useRouter} from ''\r\n+const router = useRouter();\r\n function back(){\r\n \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712559255759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,12 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n-import {useRouter} from ''\r\n+import {useRouter} from 'vue-router'\r\n const router = useRouter();\r\n function back(){\r\n-\r\n+    router\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712559262674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n import {  } from 'vue'\r\n import {useRouter} from 'vue-router'\r\n const router = useRouter();\r\n function back(){\r\n-    router\r\n+    router.back(-1)\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712559269270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n import {  } from 'vue'\r\n import {useRouter} from 'vue-router'\r\n const router = useRouter();\r\n function back(){\r\n-    router.back(-1)\r\n+    router.back();\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712559360669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <template>\r\n-    <van-nav-bar\r\n+    <!-- <van-nav-bar\r\n     title=\"登录注册\"\r\n     left-text=\"返回\"\r\n     left-arrow\r\n     @click-left=\"back\"\r\n-    />\r\n+    /> -->\r\n \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n"
+                },
+                {
+                    "date": 1712559369233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n <template>\r\n-    <!-- <van-nav-bar\r\n+    <!-- <!-- <van-nav-bar\r\n     title=\"登录注册\"\r\n     left-text=\"返回\"\r\n     left-arrow\r\n-    @click-left=\"back\"\r\n+    @click-left=\"back\" -->\r\n     /> -->\r\n-\r\n+11  \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712559377335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <template>\r\n-    <!-- <!-- <van-nav-bar\r\n+    <van-nav-bar\r\n     title=\"登录注册\"\r\n     left-text=\"返回\"\r\n     left-arrow\r\n-    @click-left=\"back\" -->\r\n-    /> -->\r\n+    @click-left=\"back\"\r\n+    />\r\n 11  \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n"
+                },
+                {
+                    "date": 1712559404499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,6 @@\n <template>\r\n-    <van-nav-bar\r\n-    title=\"登录注册\"\r\n-    left-text=\"返回\"\r\n-    left-arrow\r\n-    @click-left=\"back\"\r\n-    />\r\n+    \r\n 11  \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n"
+                },
+                {
+                    "date": 1712559606487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n         left-text=\"返回\"\r\n         left-arrow\r\n         @click-left=\"back\"\r\n         />\r\n+    <div class=\"login\"></div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Login\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712559837220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+<template>\r\n+    <van-nav-bar\r\n+        title=\"登录注册\"\r\n+        left-text=\"返回\"\r\n+        left-arrow\r\n+        @click-left=\"back\"\r\n+        fixed=\"true\"\r\n+        />\r\n+    <div class=\"container\">\r\n+        <img class=\"logo\" src=\"https://pic3.zhimg.com/v2-c27045c61ad770c1a13b9c1c5dc01c5a_r.jpg?source=1940ef5c\" alt=\"\">\r\n+    </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Login\" setup>\r\n+import {  } from 'vue'\r\n+import {useRouter} from 'vue-router'\r\n+const router = useRouter();\r\n+function back(){\r\n+    router.back();\r\n+}\r\n+</script>\r\n+\r\n+<style scoped lang=\"scss\">\r\n+.container{\r\n+    .logo{\r\n+        width: 150px;\r\n+        ma\r\n+    }\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712546345866,
+            "name": "Commit-0",
+            "content": "<template>\r\n\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

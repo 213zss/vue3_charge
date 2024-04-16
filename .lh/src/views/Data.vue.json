@@ -1,0 +1,198 @@
+{
+    "sourceFile": "src/views/Data.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 45,
+            "patches": [
+                {
+                    "date": 1712922246976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712922262907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n <template>\r\n-\r\n+    <div class=\"data\">\r\n+        <div class=\"header\"></div>\r\n+    </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Data\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712922301831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n <template>\r\n     <div class=\"data\">\r\n-        <div class=\"header\"></div>\r\n+        <div class=\"header\">\r\n+            <div class=\"time\"></div>\r\n+            .\r\n+        </div>\r\n     </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Data\" setup>\r\n"
+                },
+                {
+                    "date": 1712922309313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n <template>\r\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n             <div class=\"time\"></div>\r\n-            .\r\n+            <div class=\"title\"></div>\r\n+            .expej\r\n         </div>\r\n     </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712922319130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+<template>\r\n+    <div class=\"data\">\r\n+        <div class=\"header\">\r\n+            <div class=\"time\"></div>\r\n+            <div class=\"title\"></div>\r\n+            <div class=\"expense\"></div>\r\n+            <div class=\"income\"></div>\r\n+        </div>\r\n+    </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Data\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922351250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n <template>\r\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n-            <div class=\"time\"></div>\r\n+            <div class=\"time\">\r\n+                \r\n+            </div>\r\n             <div class=\"title\"></div>\r\n             <div class=\"expense\"></div>\r\n             <div class=\"income\"></div>\r\n         </div>\r\n@@ -15,23 +17,5 @@\n </script>\r\n \r\n <style scoped>\r\n \r\n-</style>\n-<template>\r\n-    <div class=\"data\">\r\n-        <div class=\"header\">\r\n-            <div class=\"time\"></div>\r\n-            <div class=\"title\"></div>\r\n-            .expej\r\n-        </div>\r\n-    </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Data\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922368429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n <template>\r\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n             <div class=\"time\">\r\n-                \r\n+                <div class=\"type\" @click=\"typeVisible=true\">\r\n+            <span class=\"type-title\">全部类型</span>\r\n+            <van-icon name=\"apps-o\" />\r\n+         </div>\r\n             </div>\r\n             <div class=\"title\"></div>\r\n             <div class=\"expense\"></div>\r\n             <div class=\"income\"></div>\r\n"
+                },
+                {
+                    "date": 1712922431458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n             <div class=\"time\">\r\n                 <div class=\"type\" @click=\"typeVisible=true\">\r\n-            <span class=\"type-title\">全部类型</span>\r\n-            <van-icon name=\"apps-o\" />\r\n-         </div>\r\n+                <span class=\"type-title\">全部类型</span>\r\n+                <van-icon name=\"notes-o\" />\r\n             </div>\r\n+            </div>\r\n             <div class=\"title\"></div>\r\n             <div class=\"expense\"></div>\r\n             <div class=\"income\"></div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1712922438821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n             <div class=\"time\">\r\n-                <div class=\"type\" @click=\"typeVisible=true\">\r\n+                <div class=\"type\">\r\n                 <span class=\"type-title\">全部类型</span>\r\n                 <van-icon name=\"notes-o\" />\r\n             </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1712922448676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n <template>\r\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n             <div class=\"time\">\r\n-                <div class=\"type\">\r\n-                <span class=\"type-title\">全部类型</span>\r\n+                <span class=\"type-title\">2024-04</span>\r\n                 <van-icon name=\"notes-o\" />\r\n             </div>\r\n             </div>\r\n             <div class=\"title\"></div>\r\n"
+                },
+                {
+                    "date": 1712922460538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n             <div class=\"time\">\r\n                 <span class=\"type-title\">2024-04</span>\r\n                 <van-icon name=\"notes-o\" />\r\n             </div>\r\n-            </div>\r\n             <div class=\"title\"></div>\r\n             <div class=\"expense\"></div>\r\n             <div class=\"income\"></div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1712922502417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,29 @@\n \r\n </script>\r\n \r\n <style scoped>\r\n-\r\n+position: relative;\r\n+         display: flex;\r\n+         align-items: center;\r\n+         background-color:rgba($color: #fff, $alpha: .2);\r\n+         padding: 5px;\r\n+         border-radius: 4px;\r\n+         margin-bottom: 5px;\r\n+         align-self: baseline;\r\n+         .type-title{\r\n+            margin-right: 25px;\r\n+         }\r\n+         .type-title::after{\r\n+            content: '';\r\n+            position: absolute;\r\n+            top: 12px;\r\n+            bottom: 11px;\r\n+            right: 35px;\r\n+            width: 1px;\r\n+            background-color: #e9e9e9;\r\n+         }\r\n+         i{\r\n+            font-size: 19px;\r\n+         }\r\n+      }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922516620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n import {  } from 'vue'\r\n \r\n </script>\r\n \r\n-<style scoped>\r\n+<style scoped lang=\"scss\">\r\n+.data{}\r\n position: relative;\r\n          display: flex;\r\n          align-items: center;\r\n          background-color:rgba($color: #fff, $alpha: .2);\r\n"
+                },
+                {
+                    "date": 1712922525799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,30 +17,30 @@\n \r\n </script>\r\n \r\n <style scoped lang=\"scss\">\r\n-.data{}\r\n+.data{\r\n position: relative;\r\n-         display: flex;\r\n-         align-items: center;\r\n-         background-color:rgba($color: #fff, $alpha: .2);\r\n-         padding: 5px;\r\n-         border-radius: 4px;\r\n-         margin-bottom: 5px;\r\n-         align-self: baseline;\r\n-         .type-title{\r\n-            margin-right: 25px;\r\n-         }\r\n-         .type-title::after{\r\n-            content: '';\r\n-            position: absolute;\r\n-            top: 12px;\r\n-            bottom: 11px;\r\n-            right: 35px;\r\n-            width: 1px;\r\n-            background-color: #e9e9e9;\r\n-         }\r\n-         i{\r\n-            font-size: 19px;\r\n-         }\r\n-      }\r\n+    display: flex;\r\n+    align-items: center;\r\n+    background-color:rgba($color: #fff, $alpha: .2);\r\n+    padding: 5px;\r\n+    border-radius: 4px;\r\n+    margin-bottom: 5px;\r\n+    align-self: baseline;\r\n+    .type-title{\r\n+    margin-right: 25px;\r\n+    }\r\n+    .type-title::after{\r\n+    content: '';\r\n+    position: absolute;\r\n+    top: 12px;\r\n+    bottom: 11px;\r\n+    right: 35px;\r\n+    width: 1px;\r\n+    background-color: #e9e9e9;\r\n+    }\r\n+    i{\r\n+    font-size: 19px;\r\n+    }\r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922535774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,17 +18,17 @@\n </script>\r\n \r\n <style scoped lang=\"scss\">\r\n .data{\r\n-position: relative;\r\n+    position: relative;\r\n     display: flex;\r\n     align-items: center;\r\n     background-color:rgba($color: #fff, $alpha: .2);\r\n     padding: 5px;\r\n     border-radius: 4px;\r\n     margin-bottom: 5px;\r\n     align-self: baseline;\r\n-    .type-title{\r\n+    .title{\r\n     margin-right: 25px;\r\n     }\r\n     .type-title::after{\r\n     content: '';\r\n"
+                },
+                {
+                    "date": 1712922550645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n             <div class=\"time\">\r\n-                <span class=\"type-title\">2024-04</span>\r\n+                <span class=\"ti-title\">2024-04</span>\r\n                 <van-icon name=\"notes-o\" />\r\n             </div>\r\n             <div class=\"title\"></div>\r\n             <div class=\"expense\"></div>\r\n@@ -29,9 +29,9 @@\n     align-self: baseline;\r\n     .title{\r\n     margin-right: 25px;\r\n     }\r\n-    .type-title::after{\r\n+    .title::after{\r\n     content: '';\r\n     position: absolute;\r\n     top: 12px;\r\n     bottom: 11px;\r\n"
+                },
+                {
+                    "date": 1712922556342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n             <div class=\"time\">\r\n-                <span class=\"ti-title\">2024-04</span>\r\n+                <span class=\"time-title\">2024-04</span>\r\n                 <van-icon name=\"notes-o\" />\r\n             </div>\r\n             <div class=\"title\"></div>\r\n             <div class=\"expense\"></div>\r\n"
+                },
+                {
+                    "date": 1712922570350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n     <div class=\"data\">\r\n         <div class=\"header\">\r\n             <div class=\"time\">\r\n-                <span class=\"time-title\">2024-04</span>\r\n+                <span class=\"time-text\">2024-04</span>\r\n                 <van-icon name=\"notes-o\" />\r\n             </div>\r\n             <div class=\"title\"></div>\r\n             <div class=\"expense\"></div>\r\n"
+                },
+                {
+                    "date": 1712922585495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     padding: 5px;\r\n     border-radius: 4px;\r\n     margin-bottom: 5px;\r\n     align-self: baseline;\r\n-    .title{\r\n+    .time{\r\n     margin-right: 25px;\r\n     }\r\n     .title::after{\r\n     content: '';\r\n"
+                },
+                {
+                    "date": 1712922591357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,12 +26,12 @@\n     padding: 5px;\r\n     border-radius: 4px;\r\n     margin-bottom: 5px;\r\n     align-self: baseline;\r\n-    .time{\r\n-    margin-right: 25px;\r\n+    .time-text{\r\n+        margin-right: 25px;\r\n     }\r\n-    .title::after{\r\n+    .time-text::after{\r\n     content: '';\r\n     position: absolute;\r\n     top: 12px;\r\n     bottom: 11px;\r\n"
+                },
+                {
+                    "date": 1712922597673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,46 @@\n+<template>\r\n+    <div class=\"data\">\r\n+        <div class=\"header\">\r\n+            <div class=\"time\">\r\n+                <span class=\"time-text\">2024-04</span>\r\n+                <van-icon name=\"notes-o\" />\r\n+            </div>\r\n+            <div class=\"title\"></div>\r\n+            <div class=\"expense\"></div>\r\n+            <div class=\"income\"></div>\r\n+        </div>\r\n+    </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Data\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped lang=\"scss\">\r\n+.data{\r\n+    position: relative;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    background-color:rgba($color: #fff, $alpha: .2);\r\n+    padding: 5px;\r\n+    border-radius: 4px;\r\n+    margin-bottom: 5px;\r\n+    align-self: baseline;\r\n+    .time-text{\r\n+        margin-right: 25px;\r\n+    }\r\n+    .time-text::after{\r\n+        content: '';\r\n+        position: absolute;\r\n+        top: 12px;\r\n+        bottom: 11px;\r\n+        right: 35px;\r\n+        width: 1px;\r\n+        background-color: #e9e9e9;\r\n+    }\r\n+    i{\r\n+        font-size: 19px;\r\n+    }\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922616833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,67 +26,7 @@\n     padding: 5px;\r\n     border-radius: 4px;\r\n     margin-bottom: 5px;\r\n     align-self: baseline;\r\n-    .time-text{\r\n-        margin-right: 25px;\r\n-    }\r\n-    .time-text::after{\r\n-        content: '';\r\n-        position: absolute;\r\n-        top: 12px;\r\n-        bottom: 11px;\r\n-        right: 35px;\r\n-        width: 1px;\r\n-        background-color: #e9e9e9;\r\n-    }\r\n-    i{\r\n-        font-size: 19px;\r\n-    }\r\n+    \r\n }\r\n-</style>\n-<template>\r\n-    <div class=\"data\">\r\n-        <div class=\"header\">\r\n-            <div class=\"time\">\r\n-                <span class=\"time-text\">2024-04</span>\r\n-                <van-icon name=\"notes-o\" />\r\n-            </div>\r\n-            <div class=\"title\"></div>\r\n-            <div class=\"expense\"></div>\r\n-            <div class=\"income\"></div>\r\n-        </div>\r\n-    </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Data\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style scoped lang=\"scss\">\r\n-.data{\r\n-    position: relative;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    background-color:rgba($color: #fff, $alpha: .2);\r\n-    padding: 5px;\r\n-    border-radius: 4px;\r\n-    margin-bottom: 5px;\r\n-    align-self: baseline;\r\n-    .time-text{\r\n-        margin-right: 25px;\r\n-    }\r\n-    .time-text::after{\r\n-    content: '';\r\n-    position: absolute;\r\n-    top: 12px;\r\n-    bottom: 11px;\r\n-    right: 35px;\r\n-    width: 1px;\r\n-    background-color: #e9e9e9;\r\n-    }\r\n-    i{\r\n-    font-size: 19px;\r\n-    }\r\n-}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922629863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,7 +26,9 @@\n     padding: 5px;\r\n     border-radius: 4px;\r\n     margin-bottom: 5px;\r\n     align-self: baseline;\r\n-    \r\n+    .time{\r\n+        background-color: ;\r\n+    }\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922636101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,23 @@\n     border-radius: 4px;\r\n     margin-bottom: 5px;\r\n     align-self: baseline;\r\n     .time{\r\n-        background-color: ;\r\n+        background-color: $primary;\r\n+        .time-text{\r\n+        margin-right: 25px;\r\n     }\r\n+    .time-text::after{\r\n+        content: '';\r\n+        position: absolute;\r\n+        top: 12px;\r\n+        bottom: 11px;\r\n+        right: 35px;\r\n+        width: 1px;\r\n+        background-color: #e9e9e9;\r\n+    }\r\n+    i{\r\n+        font-size: 19px;\r\n+    }\r\n+    }\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922685207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,23 +27,23 @@\n     border-radius: 4px;\r\n     margin-bottom: 5px;\r\n     align-self: baseline;\r\n     .time{\r\n-        background-color: $primary;\r\n+        background-color: $primary-bg;\r\n         .time-text{\r\n-        margin-right: 25px;\r\n+            margin-right: 25px;\r\n+        }\r\n+        .time-text::after{\r\n+            content: '';\r\n+            position: absolute;\r\n+            top: 12px;\r\n+            bottom: 11px;\r\n+            right: 35px;\r\n+            width: 1px;\r\n+            background-color: #e9e9e9;\r\n+        }\r\n+        i{\r\n+            font-size: 19px;\r\n+        }\r\n     }\r\n-    .time-text::after{\r\n-        content: '';\r\n-        position: absolute;\r\n-        top: 12px;\r\n-        bottom: 11px;\r\n-        right: 35px;\r\n-        width: 1px;\r\n-        background-color: #e9e9e9;\r\n-    }\r\n-    i{\r\n-        font-size: 19px;\r\n-    }\r\n-    }\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922706007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,24 +26,7 @@\n     padding: 5px;\r\n     border-radius: 4px;\r\n     margin-bottom: 5px;\r\n     align-self: baseline;\r\n-    .time{\r\n-        background-color: $primary-bg;\r\n-        .time-text{\r\n-            margin-right: 25px;\r\n-        }\r\n-        .time-text::after{\r\n-            content: '';\r\n-            position: absolute;\r\n-            top: 12px;\r\n-            bottom: 11px;\r\n-            right: 35px;\r\n-            width: 1px;\r\n-            background-color: #e9e9e9;\r\n-        }\r\n-        i{\r\n-            font-size: 19px;\r\n-        }\r\n-    }\r\n+    \r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922715855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,15 +18,17 @@\n </script>\r\n \r\n <style scoped lang=\"scss\">\r\n .data{\r\n-    position: relative;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    background-color:rgba($color: #fff, $alpha: .2);\r\n-    padding: 5px;\r\n-    border-radius: 4px;\r\n-    margin-bottom: 5px;\r\n-    align-self: baseline;\r\n-    \r\n+    // position: relative;\r\n+    // display: flex;\r\n+    // align-items: center;\r\n+    // background-color:rgba($color: #fff, $alpha: .2);\r\n+    // padding: 5px;\r\n+    // border-radius: 4px;\r\n+    // margin-bottom: 5px;\r\n+    // align-self: baseline;\r\n+    .header{\r\n+        \r\n+    }\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922742258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,26 @@\n     // border-radius: 4px;\r\n     // margin-bottom: 5px;\r\n     // align-self: baseline;\r\n     .header{\r\n-        \r\n+        background-color: white;\r\n+        .time{\r\n+            background-color: $primary-bg;\r\n+            .time-text{\r\n+                margin-right: 25px;\r\n+            }\r\n+            .time-text::after{\r\n+                content: '';\r\n+                position: absolute;\r\n+                top: 12px;\r\n+                bottom: 11px;\r\n+                right: 35px;\r\n+                width: 1px;\r\n+                background-color: #e9e9e9;\r\n+            }\r\n+            i{\r\n+                font-size: 19px;\r\n+            }\r\n+        }\r\n     }\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922764443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,10 @@\n     // padding: 5px;\r\n     // border-radius: 4px;\r\n     // margin-bottom: 5px;\r\n     // align-self: baseline;\r\n+    background-color: white;\r\n+\r\n     .header{\r\n         background-color: white;\r\n         .time{\r\n             background-color: $primary-bg;\r\n"
+                },
+                {
+                    "date": 1712922803540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n                 top: 12px;\r\n                 bottom: 11px;\r\n                 right: 35px;\r\n                 width: 1px;\r\n-                background-color: #e9e9e9;\r\n+                background-color: #ccc;\r\n             }\r\n             i{\r\n                 font-size: 19px;\r\n             }\r\n"
+                },
+                {
+                    "date": 1712922819509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n                 top: 12px;\r\n                 bottom: 11px;\r\n                 right: 35px;\r\n                 width: 1px;\r\n-                background-color: #ccc;\r\n+                background-color: bla;\r\n             }\r\n             i{\r\n                 font-size: 19px;\r\n             }\r\n"
+                },
+                {
+                    "date": 1712922835654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,54 @@\n+<template>\r\n+    <div class=\"data\">\r\n+        <div class=\"header\">\r\n+            <div class=\"time\">\r\n+                <span class=\"time-text\">2024-04</span>\r\n+                <van-icon name=\"notes-o\" />\r\n+            </div>\r\n+            <div class=\"title\"></div>\r\n+            <div class=\"expense\"></div>\r\n+            <div class=\"income\"></div>\r\n+        </div>\r\n+    </div>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Data\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped lang=\"scss\">\r\n+.data{\r\n+    // position: relative;\r\n+    // display: flex;\r\n+    // align-items: center;\r\n+    // background-color:rgba($color: #fff, $alpha: .2);\r\n+    // padding: 5px;\r\n+    // border-radius: 4px;\r\n+    // margin-bottom: 5px;\r\n+    // align-self: baseline;\r\n+    background-color: white;\r\n+\r\n+    .header{\r\n+        background-color: white;\r\n+        .time{\r\n+            position: relative;\r\n+            .time-text{\r\n+                margin-right: 25px;\r\n+            }\r\n+            .time-text::after{\r\n+                content: '';\r\n+                position: absolute;\r\n+                top: 12px;\r\n+                bottom: 11px;\r\n+                right: 35px;\r\n+                width: 1px;\r\n+                background-color: black;\r\n+            }\r\n+            i{\r\n+                font-size: 19px;\r\n+            }\r\n+        }\r\n+    }\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712922864634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,62 +32,12 @@\n     .header{\r\n         background-color: white;\r\n         .time{\r\n             position: relative;\r\n-            .time-text{\r\n-                margin-right: 25px;\r\n-            }\r\n-            .time-text::after{\r\n-                content: '';\r\n-                position: absolute;\r\n-                top: 12px;\r\n-                bottom: 11px;\r\n-                right: 35px;\r\n-                width: 1px;\r\n-                background-color: black;\r\n-            }\r\n-            i{\r\n-                font-size: 19px;\r\n-            }\r\n-        }\r\n-    }\r\n-}\r\n-</style>\n-<template>\r\n-    <div class=\"data\">\r\n-        <div class=\"header\">\r\n-            <div class=\"time\">\r\n-                <span class=\"time-text\">2024-04</span>\r\n-                <van-icon name=\"notes-o\" />\r\n-            </div>\r\n-            <div class=\"title\"></div>\r\n-            <div class=\"expense\"></div>\r\n-            <div class=\"income\"></div>\r\n-        </div>\r\n-    </div>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Data\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style scoped lang=\"scss\">\r\n-.data{\r\n-    // position: relative;\r\n-    // display: flex;\r\n-    // align-items: center;\r\n-    // background-color:rgba($color: #fff, $alpha: .2);\r\n-    // padding: 5px;\r\n+             // padding: 5px;\r\n     // border-radius: 4px;\r\n     // margin-bottom: 5px;\r\n     // align-self: baseline;\r\n-    background-color: white;\r\n-\r\n-    .header{\r\n-        background-color: white;\r\n-        .time{\r\n-            background-color: $primary-bg;\r\n             .time-text{\r\n                 margin-right: 25px;\r\n             }\r\n             .time-text::after{\r\n@@ -96,9 +46,9 @@\n                 top: 12px;\r\n                 bottom: 11px;\r\n                 right: 35px;\r\n                 width: 1px;\r\n-                background-color: bla;\r\n+                background-color: black;\r\n             }\r\n             i{\r\n                 font-size: 19px;\r\n             }\r\n"
+                },
+                {
+                    "date": 1712922870688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,12 +32,12 @@\n     .header{\r\n         background-color: white;\r\n         .time{\r\n             position: relative;\r\n-             // padding: 5px;\r\n-    // border-radius: 4px;\r\n-    // margin-bottom: 5px;\r\n-    // align-self: baseline;\r\n+             padding: 5px;\r\n+            border-radius: 4px;\r\n+            margin-bottom: 5px;\r\n+            align-self: baseline;\r\n             .time-text{\r\n                 margin-right: 25px;\r\n             }\r\n             .time-text::after{\r\n"
+                },
+                {
+                    "date": 1712922876985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,11 @@\n     .header{\r\n         background-color: white;\r\n         .time{\r\n             position: relative;\r\n-             padding: 5px;\r\n+              // display: flex;\r\n+    // align-items: center;\r\n+            padding: 5px;\r\n             border-radius: 4px;\r\n             margin-bottom: 5px;\r\n             align-self: baseline;\r\n             .time-text{\r\n"
+                },
+                {
+                    "date": 1712922882505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         background-color: white;\r\n         .time{\r\n             position: relative;\r\n               // display: flex;\r\n-    // align-items: center;\r\n+            // align-items: center;\r\n             padding: 5px;\r\n             border-radius: 4px;\r\n             margin-bottom: 5px;\r\n             align-self: baseline;\r\n"
+                },
+                {
+                    "date": 1712922891355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,10 +32,9 @@\n     .header{\r\n         background-color: white;\r\n         .time{\r\n             position: relative;\r\n-              // display: flex;\r\n-            // align-items: center;\r\n+            align-items: center;\r\n             padding: 5px;\r\n             border-radius: 4px;\r\n             margin-bottom: 5px;\r\n             align-self: baseline;\r\n"
+                },
+                {
+                    "date": 1712922913101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,12 +32,13 @@\n     .header{\r\n         background-color: white;\r\n         .time{\r\n             position: relative;\r\n-            align-items: center;\r\n             padding: 5px;\r\n             border-radius: 4px;\r\n             margin-bottom: 5px;\r\n+              // display: flex;\r\n+    // align-items: center;\r\n             align-self: baseline;\r\n             .time-text{\r\n                 margin-right: 25px;\r\n             }\r\n"
+                },
+                {
+                    "date": 1712922923348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,10 @@\n             position: relative;\r\n             padding: 5px;\r\n             border-radius: 4px;\r\n             margin-bottom: 5px;\r\n-              // display: flex;\r\n-    // align-items: center;\r\n+              display: flex;\r\n+            align-items: center;\r\n             align-self: baseline;\r\n             .time-text{\r\n                 margin-right: 25px;\r\n             }\r\n"
+                },
+                {
+                    "date": 1712922997942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             position: relative;\r\n             padding: 5px;\r\n             border-radius: 4px;\r\n             margin-bottom: 5px;\r\n-              display: flex;\r\n+            display: flex;\r\n             align-items: center;\r\n             align-self: baseline;\r\n             .time-text{\r\n                 margin-right: 25px;\r\n@@ -46,9 +46,9 @@\n                 content: '';\r\n                 position: absolute;\r\n                 top: 12px;\r\n                 bottom: 11px;\r\n-                right: 35px;\r\n+                le'f't: 35px;\r\n                 width: 1px;\r\n                 background-color: black;\r\n             }\r\n             i{\r\n"
+                },
+                {
+                    "date": 1712923004977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n                 content: '';\r\n                 position: absolute;\r\n                 top: 12px;\r\n                 bottom: 11px;\r\n-                le'f't: 35px;\r\n+                left: 65px;\r\n                 width: 1px;\r\n                 background-color: black;\r\n             }\r\n             i{\r\n"
+                },
+                {
+                    "date": 1712923022529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,11 +44,11 @@\n             }\r\n             .time-text::after{\r\n                 content: '';\r\n                 position: absolute;\r\n-                top: 12px;\r\n+                top: 10px;\r\n                 bottom: 11px;\r\n-                left: 65px;\r\n+                left: 60px;\r\n                 width: 1px;\r\n                 background-color: black;\r\n             }\r\n             i{\r\n"
+                },
+                {
+                    "date": 1712923031354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n             display: flex;\r\n             align-items: center;\r\n             align-self: baseline;\r\n             .time-text{\r\n-                margin-right: 25px;\r\n+                margin-right: 20px;\r\n             }\r\n             .time-text::after{\r\n                 content: '';\r\n                 position: absolute;\r\n"
+                },
+                {
+                    "date": 1712923042216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n             display: flex;\r\n             align-items: center;\r\n             align-self: baseline;\r\n             .time-text{\r\n-                margin-right: 20px;\r\n+                margin-right: 15px;\r\n             }\r\n             .time-text::after{\r\n                 content: '';\r\n                 position: absolute;\r\n"
+                },
+                {
+                    "date": 1712923050214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n                 content: '';\r\n                 position: absolute;\r\n                 top: 10px;\r\n                 bottom: 11px;\r\n-                left: 50px;\r\n+                left: 55px;\r\n                 width: 1px;\r\n                 background-color: black;\r\n             }\r\n             i{\r\n"
+                },
+                {
+                    "date": 1712923058151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n             .time-text::after{\r\n                 content: '';\r\n                 position: absolute;\r\n-                top: 10px;\r\n+                top: 8px;\r\n                 bottom: 11px;\r\n                 left: 55px;\r\n                 width: 1px;\r\n                 background-color: black;\r\n"
+                }
+            ],
+            "date": 1712922246976,
+            "name": "Commit-0",
+            "content": "<template>\r\n\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"Data\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

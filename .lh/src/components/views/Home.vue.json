@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/views/Home.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1712543517157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712544847144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n   .demo {\r\n     width: 100PX;\r\n     height: 100px;\r\n     font-size: 20px;\r\n-    background-color: $primary;\r\n+    background-color: @primary;\r\n   }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712544852779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n   .demo {\r\n     width: 100PX;\r\n     height: 100px;\r\n     font-size: 20px;\r\n-    background-color: @primary;\r\n+    background-color: $primary;\r\n   }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1712545393369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n <template>\r\n-    <div class=\"demo\">首页App</div>\r\n-    <van-button type=\"primary\" size=\"large\">大号按钮</van-button>\r\n+   \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Home\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712545402012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,12 @@\n <template>\r\n-   \r\n+   明细 \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Home\" setup>\r\n import {  } from 'vue'\r\n \r\n </script>\r\n \r\n <style lang='scss' scoped>\r\n-  .demo {\r\n-    width: 100PX;\r\n-    height: 100px;\r\n-    font-size: 20px;\r\n-    background-color: $primary;\r\n-  }\r\n+  \r\n </style>\r\n"
+                }
+            ],
+            "date": 1712543517157,
+            "name": "Commit-0",
+            "content": "<template>\r\n    <div class=\"demo\">首页App</div>\r\n    <van-button type=\"primary\" size=\"large\">大号按钮</van-button>\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"Home\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style lang='scss' scoped>\r\n  .demo {\r\n    width: 100PX;\r\n    height: 100px;\r\n    font-size: 20px;\r\n    background-color: $primary;\r\n  }\r\n</style>\r\n"
+        }
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/main.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1712538662881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712538669025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import './assets/main.css'\n \n import { createApp } from 'vue'\n import App from './App.vue'\n-import ro\n+import router from '../'\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1712538675053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import './assets/main.css'\n \n import { createApp } from 'vue'\n import App from './App.vue'\n-import router from '../'\n+import router from './router/in'\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1712538721261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import './assets/main.css'\n \n import { createApp } from 'vue'\n import App from './App.vue'\n-import router from './router/in'\n+import router from './router/idnex'\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1712538769768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import './assets/main.css'\n \n import { createApp } from 'vue'\n import App from './App.vue'\n-import router from './router/idnex'\n+import router from './router/index'\n+\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1712538787274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import router from './router/index'\n \n-createApp(App).mount('#app')\n+.mount('#app')\n"
+                },
+                {
+                    "date": 1712538793933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \n import { createApp } from 'vue'\n import App from './App.vue'\n import router from './router/index'\n-\n+const app=createApp(App)\n .mount('#app')\n"
+                },
+                {
+                    "date": 1712538799137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import router from './router/index'\n const app=createApp(App)\n-.mount('#app')\n+app\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1712539992211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import router from './router/index'\n const app=createApp(App)\n-app\n+app.use(router)\n+app.u\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712539998212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n import App from './App.vue'\n import router from './router/index'\n const app=createApp(App)\n app.use(router)\n-app.u\n+app.use(BU)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712540745825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,12 @@\n \n import { createApp } from 'vue'\n import App from './App.vue'\n import router from './router/index'\n+import { Button } from 'vant'\n+\n+\n+\n const app=createApp(App)\n app.use(router)\n-app.use(BU)\n+app.use(Button)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712540751902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,16 @@\n \n import { createApp } from 'vue'\n import App from './App.vue'\n import router from './router/index'\n+import \"lib-flexible/flexible\";\n import { Button } from 'vant'\n \n \n \n const app=createApp(App)\n app.use(router)\n app.use(Button)\n+\n+\n+\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712540770018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,12 @@\n import App from './App.vue'\n import router from './router/index'\n import \"lib-flexible/flexible\";\n import { Button } from 'vant'\n+import \"vant/lib/index.css\"; // 全局引入样式\n+import \"./index.css\";\n \n \n-\n const app=createApp(App)\n app.use(router)\n app.use(Button)\n \n"
+                },
+                {
+                    "date": 1712540776522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import router from './router/index'\n import \"lib-flexible/flexible\";\n-import { Button } from 'vant'\n import \"vant/lib/index.css\"; // 全局引入样式\n import \"./index.css\";\n \n \n"
+                },
+                {
+                    "date": 1712540967740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,10 @@\n import App from './App.vue'\n import router from './router/index'\n import \"lib-flexible/flexible\";\n import \"vant/lib/index.css\"; // 全局引入样式\n-import \"./index.css\";\n+import { Button } from 'vant'\n \n-\n const app=createApp(App)\n app.use(router)\n app.use(Button)\n \n"
+                },
+                {
+                    "date": 1712545741699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import App from './App.vue'\n import router from './router/index'\n import \"lib-flexible/flexible\";\n import \"vant/lib/index.css\"; // 全局引入样式\n-import { Button } from 'vant'\n+import { Button,Tabbar, TabbarItem } from 'vant'\n \n const app=createApp(App)\n app.use(router)\n app.use(Button)\n"
+                },
+                {
+                    "date": 1712545750577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n \n const app=createApp(App)\n app.use(router)\n app.use(Button)\n+    \n \n \n \n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712545759597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,14 @@\n import App from './App.vue'\n import router from './router/index'\n import \"lib-flexible/flexible\";\n import \"vant/lib/index.css\"; // 全局引入样式\n-import { Button,Tabbar, TabbarItem } from 'vant'\n+import { Button,Tabbar, TabbarItem, TabbarItem } from 'vant'\n \n const app=createApp(App)\n app.use(router)\n app.use(Button)\n-    \n+    .use(Tabbar, TabbarItem)\n \n \n \n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712545765760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n \n const app=createApp(App)\n app.use(router)\n app.use(Button)\n+    .use(Tabbar)\n     .use(Tabbar, TabbarItem)\n \n \n \n+\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712545772279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const app=createApp(App)\n app.use(router)\n app.use(Button)\n     .use(Tabbar)\n-    .use(Tabbar, TabbarItem)\n+    .use(TabbarItem)\n \n \n \n \n"
+                },
+                {
+                    "date": 1712545778906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import App from './App.vue'\n import router from './router/index'\n import \"lib-flexible/flexible\";\n import \"vant/lib/index.css\"; // 全局引入样式\n-import { Button,Tabbar, TabbarItem, TabbarItem } from 'vant'\n+import { Button,Tabbar, TabbarItem } from 'vant'\n \n const app=createApp(App)\n app.use(router)\n app.use(Button)\n"
+                },
+                {
+                    "date": 1712545786700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,12 @@\n import App from './App.vue'\n import router from './router/index'\n import \"lib-flexible/flexible\";\n import \"vant/lib/index.css\"; // 全局引入样式\n-import { Button,Tabbar, TabbarItem } from 'vant'\n+import { \n+    Button,\n+    Tabbar, TabbarItem,\n+ } from 'vant'\n \n const app=createApp(App)\n app.use(router)\n app.use(Button)\n"
+                },
+                {
+                    "date": 1712560452624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import \"vant/lib/index.css\"; // 全局引入样式\n import { \n     Button,\n     Tabbar, TabbarItem,\n-    Form, Field, CellGroup\n+    Form, Field, CellGroup,\n     \n  } from 'vant'\n \n const app=createApp(App)\n"
+                },
+                {
+                    "date": 1712561762470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+import './assets/main.css'\n+\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import router from './router/index'\n+import \"lib-flexible/flexible\";\n+import \"vant/lib/index.css\"; // 全局引入样式\n+import { \n+    Button,\n+    Tabbar, TabbarItem,\n+    Form, Field, CellGroup,\n+    \n+ } from 'vant'\n+\n+const app=createApp(App)\n+app.use(router)\n+app.use(Button)\n+    .use(Tabbar)\n+    .use(TabbarItem)\n+    .use(Form)\n+    .use(Field)\n+    .use(CellGroup)\n+\n+\n+\n+\n+app.mount('#app')\n"
+                }
+            ],
+            "date": 1712538662881,
+            "name": "Commit-0",
+            "content": "import './assets/main.css'\n\nimport { createApp } from 'vue'\nimport App from './App.vue'\nimport ro\ncreateApp(App).mount('#app')\n"
+        }
+    ]
+}

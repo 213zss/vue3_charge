@@ -1,0 +1,182 @@
+{
+    "sourceFile": "src/components/DateSelect.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 41,
+            "patches": [
+                {
+                    "date": 1712924427123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712924449569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n-const emit=defineEmits(['send-toy'])\r\n+const emit=defineEmits(['-toysend'])\r\n // 日期选择\r\n let dateVisible=ref(false)\r\n let currentTime=ref(dayjs().format('YYYY-MM'))\r\n const currentDate = ref(currentTime.value.split('-'));\r\n"
+                },
+                {
+                    "date": 1712924465575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n-const emit=defineEmits(['-toysend'])\r\n+const emit=defineEmits(['selectMonth'])\r\n // 日期选择\r\n let dateVisible=ref(false)\r\n let currentTime=ref(dayjs().format('YYYY-MM'))\r\n const currentDate = ref(currentTime.value.split('-'));\r\n@@ -36,8 +36,9 @@\n    return option;\r\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n+   \r\n    dateVisible.value=false\r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n"
+                },
+                {
+                    "date": 1712924482937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n    return option;\r\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n-   \r\n+   emit('send-toy',toy)\r\n    dateVisible.value=false\r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n"
+                },
+                {
+                    "date": 1712924490786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n    return option;\r\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n-   emit('send-toy',toy)\r\n+   emit('selectMonth',toy)\r\n    dateVisible.value=false\r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n"
+                },
+                {
+                    "date": 1712925162091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <van-action-sheet v-model:show=\"dateVisible\">\r\n+    <van-action-sheet>\r\n         <van-date-picker\r\n             v-model=\"currentDate\"\r\n             title=\"选择年月\"\r\n             :min-date=\"minDate\"\r\n@@ -36,9 +36,9 @@\n    return option;\r\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n-   emit('selectMonth',toy)\r\n+   emit('selectMonth',currentDate.value)\r\n    dateVisible.value=false\r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n"
+                },
+                {
+                    "date": 1712925170780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n             :formatter=\"formatter\"\r\n             :columns-type=\"columnsType\"\r\n             @confirm=\"confirmDate\"\r\n             @cancel=\"cancelDate\"\r\n-\r\n         />\r\n     </van-action-sheet>\r\n </template>\r\n \r\n@@ -18,9 +17,8 @@\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n // 日期选择\r\n-let dateVisible=ref(false)\r\n let currentTime=ref(dayjs().format('YYYY-MM'))\r\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n"
+                },
+                {
+                    "date": 1712925175948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',currentDate.value)\r\n-   dateVisible.value=false\r\n+\r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n    dateVisible.value=false\r\n"
+                },
+                {
+                    "date": 1712925183766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,8 @@\n \r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n-   dateVisible.value=false\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1712925189192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,9 @@\n \r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n+   \r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1712925223228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n    return option;\r\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n-   emit('selectMonth',currentDate.value)\r\n+   emit('selectMonth',listDate.value)\r\n \r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n"
+                },
+                {
+                    "date": 1712925252895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n    \r\n-}\r\n+\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712925267853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,15 +34,15 @@\n    return option;\r\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n-   emit('selectMonth',listDate.value)\r\n-\r\n+   emit('selectMonth',currentDate.value)\r\n+   dateVisible.value=false\r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n-   \r\n-\r\n+   dateVisible.value=false\r\n+}\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712925273927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <van-action-sheet>\r\n+    <van-action-sheet v-model:show=\"sjow\">\r\n         <van-date-picker\r\n             v-model=\"currentDate\"\r\n             title=\"选择年月\"\r\n             :min-date=\"minDate\"\r\n@@ -8,8 +8,9 @@\n             :formatter=\"formatter\"\r\n             :columns-type=\"columnsType\"\r\n             @confirm=\"confirmDate\"\r\n             @cancel=\"cancelDate\"\r\n+\r\n         />\r\n     </van-action-sheet>\r\n </template>\r\n \r\n@@ -17,8 +18,9 @@\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n // 日期选择\r\n+let dateVisible=ref(false)\r\n let currentTime=ref(dayjs().format('YYYY-MM'))\r\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n"
+                },
+                {
+                    "date": 1712925279866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <van-action-sheet v-model:show=\"sjow\">\r\n+    <van-action-sheet v-model:show=\"show\">\r\n         <van-date-picker\r\n             v-model=\"currentDate\"\r\n             title=\"选择年月\"\r\n             :min-date=\"minDate\"\r\n@@ -18,9 +18,9 @@\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n // 日期选择\r\n-let dateVisible=ref(false)\r\n+let show=ref(false)\r\n let currentTime=ref(dayjs().format('YYYY-MM'))\r\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n"
+                },
+                {
+                    "date": 1712925289525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,14 +36,14 @@\n    return option;\r\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n-   emit('selectMonth',currentDate.value)\r\n-   dateVisible.value=false\r\n+   emit('selectMonth',listDate.value)\r\n+   show.value=false\r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n-   dateVisible.value=false\r\n+   show.value=false\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1712925357171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,4 @@\n    show.value=false\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n-\r\n-<style scoped>\r\n-\r\n-</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712925368473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,8 @@\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n-   show.value=false\r\n }\r\n function cancelDate(){\r\n    console.log('取消');\r\n    show.value=false\r\n"
+                },
+                {
+                    "date": 1712925377194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <van-action-sheet v-model:show=\"show\">\r\n+    <van-action-sheet>\r\n         <van-date-picker\r\n             v-model=\"currentDate\"\r\n             title=\"选择年月\"\r\n             :min-date=\"minDate\"\r\n@@ -38,10 +38,7 @@\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n-function cancelDate(){\r\n-   console.log('取消');\r\n-   show.value=false\r\n-}\r\n+\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925398137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,9 @@\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n // 日期选择\r\n-let show=ref(false)\r\n-let currentTime=ref(dayjs().format('YYYY-MM'))\r\n+let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间\r\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n const maxDate= new Date(2025, 5, 1)\r\n"
+                },
+                {
+                    "date": 1712925407026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n // 日期选择\r\n-let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间\r\n+let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间，\r\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n const maxDate= new Date(2025, 5, 1)\r\n"
+                },
+                {
+                    "date": 1712925415146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n // 日期选择\r\n-let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间，\r\n+let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间，并gui'g\r\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n const maxDate= new Date(2025, 5, 1)\r\n"
+                },
+                {
+                    "date": 1712925430606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n // 日期选择\r\n-let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间，并gui'g\r\n+let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间，并格式化\r\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n const maxDate= new Date(2025, 5, 1)\r\n"
+                },
+                {
+                    "date": 1712925439055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,8 @@\n <script lang=\"ts\" name=\"\" setup>\r\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n-// 日期选择\r\n let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间，并格式化\r\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n"
+                },
+                {
+                    "date": 1712925485604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,14 @@\n             :max-date=\"maxDate\"\r\n             :formatter=\"formatter\"\r\n             :columns-type=\"columnsType\"\r\n             @confirm=\"confirmDate\"\r\n-            @cancel=\"cancelDate\"\r\n-\r\n         />\r\n     </van-action-sheet>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n+// 日期选择\r\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间，并格式化\r\n"
+                },
+                {
+                    "date": 1712925497366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n             :max-date=\"maxDate\"\r\n             :formatter=\"formatter\"\r\n             :columns-type=\"columnsType\"\r\n             @confirm=\"confirmDate\"\r\n+            @cancel=\"cancelDate\"\r\n+\r\n         />\r\n     </van-action-sheet>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712925506874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n             :formatter=\"formatter\"\r\n             :columns-type=\"columnsType\"\r\n             @confirm=\"confirmDate\"\r\n             @cancel=\"cancelDate\"\r\n-\r\n         />\r\n     </van-action-sheet>\r\n </template>\r\n \r\n@@ -37,7 +36,10 @@\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n-\r\n+async function confirmDate(val:object){\r\n+   currentDate.value=val.selectedValues\r\n+   emit('selectMonth',listDate.value)\r\n+}\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925513890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n-async function confirmDate(val:object){\r\n+async function canceDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n"
+                },
+                {
+                    "date": 1712925532730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,10 @@\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n-async function canceDate(val:object){\r\n+async function cancelDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n-   emit('selectMonth',listDate.value)\r\n+   emit('selectMonth',currentDate.value)\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925553362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,9 @@\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n-async function cancelDate(val:object){\r\n-   currentDate.value=val.selectedValues\r\n-   emit('selectMonth',currentDate.value)\r\n+async function cancelDate(){\r\n+   emit('selectMonth',listDate.value)\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925593844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,8 @@\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n async function cancelDate(){\r\n-   emit('selectMonth',listDate.value)\r\n+   emit('selectMonth',currentDate.value.join('-')))\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925635227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,8 @@\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n async function cancelDate(){\r\n-   emit('selectMonth',currentDate.value.join('-')))\r\n+   emit('selectMonth',currentDate.value)\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925653578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,8 @@\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n async function cancelDate(){\r\n-   emit('selectMonth',currentDate.value)\r\n+   emit('selectMonth','')\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925700795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,8 @@\n    currentDate.value=val.selectedValues\r\n    emit('selectMonth',listDate.value)\r\n }\r\n async function cancelDate(){\r\n-   emit('selectMonth','')\r\n+   // emit('selectMonth','')\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925795087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <van-action-sheet>\r\n+    <van-action-sheet v-model:show=\"a\">\r\n         <van-date-picker\r\n             v-model=\"currentDate\"\r\n             title=\"选择年月\"\r\n             :min-date=\"minDate\"\r\n"
+                },
+                {
+                    "date": 1712925829154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <van-action-sheet v-model:show=\"a\">\r\n+    <van-action-sheet v-model:show=\"show\">\r\n         <van-date-picker\r\n             v-model=\"currentDate\"\r\n             title=\"选择年月\"\r\n             :min-date=\"minDate\"\r\n@@ -22,8 +22,9 @@\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n const maxDate= new Date(2025, 5, 1)\r\n+const showActionSheet = ref(false); //\r\n // 格式化日期选项\r\n function formatter(type:any, option:object) {\r\n    if (type === 'year') {\r\n       option.text += '年';\r\n"
+                },
+                {
+                    "date": 1712925838669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n const maxDate= new Date(2025, 5, 1)\r\n-const showActionSheet = ref(false); //\r\n+const show = ref(false); //\r\n // 格式化日期选项\r\n function formatter(type:any, option:object) {\r\n    if (type === 'year') {\r\n       option.text += '年';\r\n@@ -39,7 +39,8 @@\n    emit('selectMonth',listDate.value)\r\n }\r\n async function cancelDate(){\r\n    // emit('selectMonth','')\r\n+   show.value\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925939566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n const currentDate = ref(currentTime.value.split('-'));\r\n const columnsType = ['year', 'month'];\r\n const minDate= new Date(2020, 0, 1)\r\n const maxDate= new Date(2025, 5, 1)\r\n-const show = ref(false); //\r\n+let show = ref(false); //\r\n // 格式化日期选项\r\n function formatter(type:any, option:object) {\r\n    if (type === 'year') {\r\n       option.text += '年';\r\n@@ -39,8 +39,8 @@\n    emit('selectMonth',listDate.value)\r\n }\r\n async function cancelDate(){\r\n    // emit('selectMonth','')\r\n-   show.value\r\n+   show.value=false\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712925959430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         />\r\n     </van-action-sheet>\r\n </template>\r\n \r\n-<script lang=\"ts\" name=\"\" setup>\r\n+<script lang=\"ts\" name=\"DateSelect\" setup>\r\n // 日期选择\r\n import { ref,computed } from 'vue'\r\n import dayjs from 'dayjs'\r\n const emit=defineEmits(['selectMonth'])\r\n"
+                },
+                {
+                    "date": 1712926190403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n    return option;\r\n }\r\n async function confirmDate(val:object){\r\n    currentDate.value=val.selectedValues\r\n-   emit('selectMonth',listDate.value)\r\n+   // emit('selectMonth',listDate.value)\r\n }\r\n async function cancelDate(){\r\n    // emit('selectMonth','')\r\n    show.value=false\r\n"
+                },
+                {
+                    "date": 1712926204252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,8 @@\n \r\n }\r\n async function cancelDate(){\r\n    // emit('selectMonth','')\r\n-   show.value=false\r\n+\r\n }\r\n const listDate = computed(() => currentDate.value.join('-'));\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712926220007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,46 @@\n+<template>\r\n+    <van-action-sheet v-model:show=\"show\">\r\n+        <van-date-picker\r\n+            v-model=\"currentDate\"\r\n+            title=\"选择年月\"\r\n+            :min-date=\"minDate\"\r\n+            :max-date=\"maxDate\"\r\n+            :formatter=\"formatter\"\r\n+            :columns-type=\"columnsType\"\r\n+            @confirm=\"confirmDate\"\r\n+            @cancel=\"cancelDate\"\r\n+        />\r\n+    </van-action-sheet>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"DateSelect\" setup>\r\n+// 日期选择\r\n+import { ref,computed } from 'vue'\r\n+import dayjs from 'dayjs'\r\n+const emit=defineEmits(['selectMonth'])\r\n+let currentTime=ref(dayjs().format('YYYY-MM'))//获取现在的时间，并格式化\r\n+const currentDate = ref(currentTime.value.split('-'));\r\n+const columnsType = ['year', 'month'];\r\n+const minDate= new Date(2020, 0, 1)\r\n+const maxDate= new Date(2025, 5, 1)\r\n+let show = ref(false); //\r\n+// 格式化日期选项\r\n+function formatter(type:any, option:object) {\r\n+   if (type === 'year') {\r\n+      option.text += '年';\r\n+   }\r\n+   if (type === 'month'){\r\n+      option.text += '月';\r\n+   }\r\n+   return option;\r\n+}\r\n+async function confirmDate(val:object){\r\n+   currentDate.value=val.selectedValues\r\n+   // emit('selectMonth',listDate.value)\r\n+\r\n+}\r\n+async function cancelDate(){\r\n+   emit('selectMonth','')\r\n+}\r\n+const listDate = computed(() => currentDate.value.join('-'));\r\n+</script>\r\n"
+                }
+            ],
+            "date": 1712924427123,
+            "name": "Commit-0",
+            "content": "<template>\r\n    <van-action-sheet v-model:show=\"dateVisible\">\r\n        <van-date-picker\r\n            v-model=\"currentDate\"\r\n            title=\"选择年月\"\r\n            :min-date=\"minDate\"\r\n            :max-date=\"maxDate\"\r\n            :formatter=\"formatter\"\r\n            :columns-type=\"columnsType\"\r\n            @confirm=\"confirmDate\"\r\n            @cancel=\"cancelDate\"\r\n\r\n        />\r\n    </van-action-sheet>\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"\" setup>\r\nimport { ref,computed } from 'vue'\r\nimport dayjs from 'dayjs'\r\nconst emit=defineEmits(['send-toy'])\r\n// 日期选择\r\nlet dateVisible=ref(false)\r\nlet currentTime=ref(dayjs().format('YYYY-MM'))\r\nconst currentDate = ref(currentTime.value.split('-'));\r\nconst columnsType = ['year', 'month'];\r\nconst minDate= new Date(2020, 0, 1)\r\nconst maxDate= new Date(2025, 5, 1)\r\n// 格式化日期选项\r\nfunction formatter(type:any, option:object) {\r\n   if (type === 'year') {\r\n      option.text += '年';\r\n   }\r\n   if (type === 'month'){\r\n      option.text += '月';\r\n   }\r\n   return option;\r\n}\r\nasync function confirmDate(val:object){\r\n   currentDate.value=val.selectedValues\r\n   dateVisible.value=false\r\n}\r\nfunction cancelDate(){\r\n   console.log('取消');\r\n   dateVisible.value=false\r\n}\r\nconst listDate = computed(() => currentDate.value.join('-'));\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

@@ -1,0 +1,150 @@
+{
+    "sourceFile": "src/components/NavBar.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 33,
+            "patches": [
+                {
+                    "date": 1712545693512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712545724056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,11 @@\n <template>\r\n+<van-tabbar v-model=\"active\">\r\n+  <van-tabbar-item icon=\"home-o\">标签</van-tabbar-item>\r\n+  <van-tabbar-item icon=\"search\">标签</van-tabbar-item>\r\n+  <van-tabbar-item icon=\"friends-o\">标签</van-tabbar-item>\r\n+  <van-tabbar-item icon=\"setting-o\">标签</van-tabbar-item>\r\n+</van-tabbar>\r\n \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n"
+                },
+                {
+                    "date": 1712545816087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <template>\r\n-<van-tabbar v-model=\"active\">\r\n-  <van-tabbar-item icon=\"home-o\">标签</van-tabbar-item>\r\n-  <van-tabbar-item icon=\"search\">标签</van-tabbar-item>\r\n-  <van-tabbar-item icon=\"friends-o\">标签</van-tabbar-item>\r\n-  <van-tabbar-item icon=\"setting-o\">标签</van-tabbar-item>\r\n-</van-tabbar>\r\n+    <van-tabbar v-model=\"active\">\r\n+    <van-tabbar-item icon=\"home-o\">明细</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"search\">标签</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"friends-o\">标签</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"setting-o\">标签</van-tabbar-item>\r\n+    </van-tabbar>\r\n \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n"
+                },
+                {
+                    "date": 1712545825034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n     <van-tabbar-item icon=\"home-o\">明细</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"search\">标签</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"search\">tong'j</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\">标签</van-tabbar-item>\r\n     <van-tabbar-item icon=\"setting-o\">标签</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n"
+                },
+                {
+                    "date": 1712545852148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n-    <van-tabbar-item icon=\"home-o\">明细</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"search\">tong'j</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"friends-o\">标签</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"setting-o\">标签</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"home-o\" >明细</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"search\">统计</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"friends-o\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712545861071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n-    <van-tabbar-item icon=\"home-o\" >明细</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"home-o\" @click=\"G\">明细</van-tabbar-item>\r\n     <van-tabbar-item icon=\"search\">统计</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n"
+                },
+                {
+                    "date": 1712545867779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n-    <van-tabbar-item icon=\"home-o\" @click=\"G\">明细</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"home-o\" @click=\"goTo('')\">明细</van-tabbar-item>\r\n     <van-tabbar-item icon=\"search\">统计</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n"
+                },
+                {
+                    "date": 1712545888895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n-\r\n+function goTo(path)\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712545896246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n-function goTo(path)\r\n+function goTo(path){\r\n+    \r\n+}\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712545907637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n+import \r\n function goTo(path){\r\n     \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712545913865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n-import \r\n+import { useRouter } from 'vue-router';\r\n function goTo(path){\r\n     \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712545922060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n import { useRouter } from 'vue-router';\r\n+const rou\r\n function goTo(path){\r\n     \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712545927858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n import { useRouter } from 'vue-router';\r\n-const rou\r\n+const router=useRouter*()\r\n function goTo(path){\r\n     \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712545979312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n import { useRouter } from 'vue-router';\r\n-const router=useRouter*()\r\n+const router=useRouter()\r\n function goTo(path){\r\n-    \r\n+    router.ou\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712545986727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n import {  } from 'vue'\r\n import { useRouter } from 'vue-router';\r\n const router=useRouter()\r\n function goTo(path){\r\n-    router.ou\r\n+    router.push(path)\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712546008012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n import { useRouter } from 'vue-router';\r\n+const active = ref(0);\r\n+    return { active };\r\n const router=useRouter()\r\n function goTo(path){\r\n     router.push(path)\r\n }\r\n"
+                },
+                {
+                    "date": 1712546023794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,14 +7,13 @@\n \r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n-import {  } from 'vue'\r\n+import { ref } from 'vue'\r\n import { useRouter } from 'vue-router';\r\n const active = ref(0);\r\n-    return { active };\r\n const router=useRouter()\r\n-function goTo(path){\r\n+function goTo(path:string){\r\n     router.push(path)\r\n }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1712546029520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n-    <van-tabbar-item icon=\"home-o\" @click=\"goTo('')\">明细</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"home-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n     <van-tabbar-item icon=\"search\">统计</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n"
+                },
+                {
+                    "date": 1712546053001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     </van-tabbar>\r\n \r\n </template>\r\n \r\n-<script lang=\"ts\" name=\"\" setup>\r\n+<script lang=\"ts\" name=\"NavBar\" setup>\r\n import { ref } from 'vue'\r\n import { useRouter } from 'vue-router';\r\n const active = ref(0);\r\n const router=useRouter()\r\n"
+                },
+                {
+                    "date": 1712546116647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n     <van-tabbar-item icon=\"home-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"search\">统计</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"search\" @click=\"goTo('/home')\">统计</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n </template>\r\n"
+                },
+                {
+                    "date": 1712546122303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n     <van-tabbar-item icon=\"home-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"search\" @click=\"goTo('/home')\">统计</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"friends-o\">我的</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"search\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712546192872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n+        <van-icon name=\"bar-chart-o\" />\r\n     <van-tabbar-item icon=\"home-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n     <van-tabbar-item icon=\"search\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n"
+                },
+                {
+                    "date": 1712546199215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n-        <van-icon name=\"bar-chart-o\" />\r\n     <van-tabbar-item icon=\"home-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"search\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n </template>\r\n"
+                },
+                {
+                    "date": 1712546251987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n     <van-tabbar v-model=\"active\">\r\n-    <van-tabbar-item icon=\"home-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n     <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n \r\n"
+                },
+                {
+                    "date": 1712557414618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+<template>\r\n+    <van-tabbar v-model=\"active\">\r\n+    <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n+    </van-tabbar >\r\n+\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"NavBar\" setup>\r\n+import { ref } from 'vue'\r\n+import { useRouter } from 'vue-router';\r\n+const active = ref(0);\r\n+const router=useRouter()\r\n+function goTo(path:string){\r\n+    router.push(path)\r\n+}\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712577252357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,32 +2,9 @@\n     <van-tabbar v-model=\"active\">\r\n     <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n     <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n     <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n-    </van-tabbar >\r\n-\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"NavBar\" setup>\r\n-import { ref } from 'vue'\r\n-import { useRouter } from 'vue-router';\r\n-const active = ref(0);\r\n-const router=useRouter()\r\n-function goTo(path:string){\r\n-    router.push(path)\r\n-}\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n-</style>\n-<template>\r\n-    <van-tabbar v-model=\"active\">\r\n-    <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n-\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"NavBar\" setup>\r\n import { ref } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712577314034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+<template>\r\n+    <van-tabbar v-model=\"active\">\r\n+        <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n+        <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n+        <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n+    </van-tabbar>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"NavBar\" setup>\r\n+import { ref } from 'vue'\r\n+import { useRouter } from 'vue-router';\r\n+const active = ref(0);\r\n+const router=useRouter()\r\n+function goTo(path:string){\r\n+    router.push(path)\r\n+}\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712577333974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+<template>\r\n+    <van-tabbar v-model=\"active\" active-color=\"#ee0a24\">\r\n+        <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n+        <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n+        <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n+    </van-tabbar>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"NavBar\" setup>\r\n+import { ref } from 'vue'\r\n+import { useRouter } from 'vue-router';\r\n+const active = ref(0);\r\n+const router=useRouter()\r\n+function goTo(path:string){\r\n+    router.push(path)\r\n+}\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712577342100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <van-tabbar v-model=\"active\" active-color=\"#ee0a24\">\r\n+    <van-tabbar v-model=\"active\" active-color=\"#FAD954\">\r\n         <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n         <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n         <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n@@ -17,47 +17,5 @@\n </script>\r\n \r\n <style scoped>\r\n \r\n-</style>\n-<template>\r\n-    <van-tabbar v-model=\"active\">\r\n-        <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n-        <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n-        <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n-    </van-tabbar>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"NavBar\" setup>\r\n-import { ref } from 'vue'\r\n-import { useRouter } from 'vue-router';\r\n-const active = ref(0);\r\n-const router=useRouter()\r\n-function goTo(path:string){\r\n-    router.push(path)\r\n-}\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n-</style>\n-<template>\r\n-    <van-tabbar v-model=\"active\">\r\n-    <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n-    </van-tabbar>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"NavBar\" setup>\r\n-import { ref } from 'vue'\r\n-import { useRouter } from 'vue-router';\r\n-const active = ref(0);\r\n-const router=useRouter()\r\n-function goTo(path:string){\r\n-    router.push(path)\r\n-}\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712577348360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <van-tabbar v-model=\"active\" active-color=\"#FAD954\">\r\n+    <van-tabbar v-model=\"active\" active-color=\"$\">\r\n         <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n         <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n         <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n"
+                },
+                {
+                    "date": 1712577469157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-<template>\r\n-    <van-tabbar v-model=\"active\" active-color=\"$\">\r\n+<template>#FAD954\r\n+    <van-tabbar v-model=\"active\" active-color=\"#FAD954\">\r\n         <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n         <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n         <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n"
+                },
+                {
+                    "date": 1712577706303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n-<template>#FAD954\r\n-    <van-tabbar v-model=\"active\" active-color=\"#FAD954\">\r\n-        <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n-        <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n-        <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n+<template>\r\n+    <van-tabbar v-model=\"active\">\r\n+    <van-tabbar-item icon=\"home-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n+    <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n+\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"NavBar\" setup>\r\n import { ref } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712577711750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,10 @@\n <template>\r\n-    <van-tabbar v-model=\"active\">\r\n-    <van-tabbar-item icon=\"home-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n-    <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n+    <van-tabbar v-model=\"active\" >\r\n+        <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n+        <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n+        <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n-\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"NavBar\" setup>\r\n import { ref } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712646615462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <template>\r\n-    <van-tabbar v-model=\"active\" >\r\n+    \r\n+    <van-tabbar v-model=\"active\">\r\n         <van-tabbar-item icon=\"notes-o\" @click=\"goTo('/home')\">明细</van-tabbar-item>\r\n         <van-tabbar-item icon=\"bar-chart-o\" @click=\"goTo('/data')\">统计</van-tabbar-item>\r\n         <van-tabbar-item icon=\"friends-o\" @click=\"goTo('/user')\">我的</van-tabbar-item>\r\n     </van-tabbar>\r\n"
+                }
+            ],
+            "date": 1712545693512,
+            "name": "Commit-0",
+            "content": "<template>\r\n\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}
